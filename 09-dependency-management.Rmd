@@ -1,0 +1,12 @@
+# Dependency Management
+
+## Docker
+
+* [Rocker](https://github.com/rocker-org/rocker)
+
+## R
+
+* [packrat](https://rstudio.github.io/packrat/)
+* [pkgsnap](https://github.com/mangothecat/pkgsnap)
+
+## Python
