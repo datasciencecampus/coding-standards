@@ -1,0 +1,15 @@
+# R Programming Style
+
+Make pretty code.
+
+## Tools
+
+* [goodpractice](https://github.com/MangoTheCat/goodpractice): Give advice about good practices when building R packages. Advice includes functions and syntax to avoid, package structure, code complexity, code formatting, etc.
+    * [lintr](https://github.com/jimhester/lintr): Static code analysis for R. Can be executed standalone/part of build or integrated into rstudio, emacs/ess, vim etc.
+* [formatr](https://yihui.name/formatr/): Format R code automatically.
+
+## Links
+
+* [Hadley Wickham's R Style Guide](http://r-pkgs.had.co.nz/style.html)
+
+* [Code Golf](http://codegolf.stackexchange.com/) :)
