@@ -12,3 +12,10 @@ documentclass: book
 # Preface {-}
 
 The purpose of this document is to define correct coding standards and project best practices to be used within the Data Science Campus (DSC) at the Office for National Statistics (ONS).
+
+```{r knitrPrefs, include = FALSE}
+knitr::opts_chunk$set(
+  fig.height = 6,
+  fig.align = "center"
+)
+```
