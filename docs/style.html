@@ -50,6 +50,7 @@
 
 
 
+<link rel="stylesheet" href="custom.css" type="text/css" />
 </head>
 
 <body>
@@ -65,11 +66,12 @@
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Preface</a></li>
 <li class="chapter" data-level="1" data-path="Intro.html"><a href="Intro.html"><i class="fa fa-check"></i><b>1</b> Introduction</a></li>
 <li class="chapter" data-level="2" data-path="style.html"><a href="style.html"><i class="fa fa-check"></i><b>2</b> Programming Styles</a><ul>
-<li class="chapter" data-level="2.1" data-path="style.html"><a href="style.html#r"><i class="fa fa-check"></i><b>2.1</b> R</a><ul>
-<li class="chapter" data-level="2.1.1" data-path="style.html"><a href="style.html#tools"><i class="fa fa-check"></i><b>2.1.1</b> Tools</a></li>
-<li class="chapter" data-level="2.1.2" data-path="style.html"><a href="style.html#links"><i class="fa fa-check"></i><b>2.1.2</b> Links</a></li>
+<li class="chapter" data-level="2.1" data-path="style.html"><a href="style.html#github"><i class="fa fa-check"></i><b>2.1</b> GitHub</a></li>
+<li class="chapter" data-level="2.2" data-path="style.html"><a href="style.html#r"><i class="fa fa-check"></i><b>2.2</b> R</a><ul>
+<li class="chapter" data-level="2.2.1" data-path="style.html"><a href="style.html#tools"><i class="fa fa-check"></i><b>2.2.1</b> Tools</a></li>
+<li class="chapter" data-level="2.2.2" data-path="style.html"><a href="style.html#links"><i class="fa fa-check"></i><b>2.2.2</b> Links</a></li>
 </ul></li>
-<li class="chapter" data-level="2.2" data-path="style.html"><a href="style.html#python"><i class="fa fa-check"></i><b>2.2</b> Python</a></li>
+<li class="chapter" data-level="2.3" data-path="style.html"><a href="style.html#python"><i class="fa fa-check"></i><b>2.3</b> Python</a></li>
 </ul></li>
 <li class="chapter" data-level="3" data-path="version-control.html"><a href="version-control.html"><i class="fa fa-check"></i><b>3</b> Version Control</a><ul>
 <li class="chapter" data-level="3.1" data-path="version-control.html"><a href="version-control.html#commit-best-practices"><i class="fa fa-check"></i><b>3.1</b> Commit best practices</a></li>
@@ -88,8 +90,8 @@
 <li class="chapter" data-level="9.1" data-path="deps.html"><a href="deps.html#docker"><i class="fa fa-check"></i><b>9.1</b> Docker</a></li>
 <li class="chapter" data-level="9.2" data-path="deps.html"><a href="deps.html#r-3"><i class="fa fa-check"></i><b>9.2</b> R</a><ul>
 <li class="chapter" data-level="9.2.1" data-path="deps.html"><a href="deps.html#description-file"><i class="fa fa-check"></i><b>9.2.1</b> <code>DESCRIPTION</code> file</a></li>
-<li class="chapter" data-level="9.2.2" data-path="deps.html"><a href="deps.html#packrat"><i class="fa fa-check"></i><b>9.2.2</b> <a href="https://rstudio.github.io/packrat/"><code>packrat</code></a></a></li>
-<li class="chapter" data-level="9.2.3" data-path="deps.html"><a href="deps.html#pkgsnap"><i class="fa fa-check"></i><b>9.2.3</b> <a href="https://github.com/mangothecat/pkgsnap"><code>pkgsnap</code></a></a></li>
+<li class="chapter" data-level="9.2.2" data-path="deps.html"><a href="deps.html#packrat"><i class="fa fa-check"></i><b>9.2.2</b> packrat</a></li>
+<li class="chapter" data-level="9.2.3" data-path="deps.html"><a href="deps.html#pkgsnap"><i class="fa fa-check"></i><b>9.2.3</b> pkgsnap</a></li>
 </ul></li>
 <li class="chapter" data-level="9.3" data-path="deps.html"><a href="deps.html#python-2"><i class="fa fa-check"></i><b>9.3</b> Python</a></li>
 </ul></li>
@@ -113,10 +115,14 @@
 <div id="style" class="section level1">
 <h1><span class="header-section-number">2</span> Programming Styles</h1>
 <p>Make pretty code.</p>
+<div id="github" class="section level2">
+<h2><span class="header-section-number">2.1</span> GitHub</h2>
+<p>All GitHub repository names should follow the <code>kebab-case</code> naming convention and be in lower case.</p>
+</div>
 <div id="r" class="section level2">
-<h2><span class="header-section-number">2.1</span> R</h2>
+<h2><span class="header-section-number">2.2</span> R</h2>
 <div id="tools" class="section level3">
-<h3><span class="header-section-number">2.1.1</span> Tools</h3>
+<h3><span class="header-section-number">2.2.1</span> Tools</h3>
 <ul>
 <li><a href="https://github.com/MangoTheCat/goodpractice">goodpractice</a>: Give advice about good practices when building R packages. Advice includes functions and syntax to avoid, package structure, code complexity, code formatting, etc.
 <ul>
@@ -126,7 +132,7 @@
 </ul>
 </div>
 <div id="links" class="section level3">
-<h3><span class="header-section-number">2.1.2</span> Links</h3>
+<h3><span class="header-section-number">2.2.2</span> Links</h3>
 <ul>
 <li><p><a href="http://r-pkgs.had.co.nz/style.html">Hadley Wickham’s R Style Guide</a></p></li>
 <li><p><a href="http://codegolf.stackexchange.com/">Code Golf</a> :)</p></li>
@@ -134,7 +140,7 @@
 </div>
 </div>
 <div id="python" class="section level2">
-<h2><span class="header-section-number">2.2</span> Python</h2>
+<h2><span class="header-section-number">2.3</span> Python</h2>
 
 </div>
 </div>
