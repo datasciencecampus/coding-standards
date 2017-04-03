@@ -1,8 +1,0 @@
-# Code Testing {#tests}
-
-## R
-* [testthat](https://github.com/hadley/testthat)
-
-## Python
-* [nosetools](http://nose.readthedocs.io/en/latest/)
-* [pytest](https://docs.pytest.org/en/latest/)
