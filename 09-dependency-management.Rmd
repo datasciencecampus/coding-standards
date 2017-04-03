@@ -18,9 +18,9 @@ Keeping track of dependencies in R can be a chore, particularly when using lots 
 ### `DESCRIPTION` file
 This is the most basic way of maintanining dependencies in R, though it is not recommended - it is only part of the dependency management system you should employ. Each R package will have a `DESCRIPTION` file which should contain a list of packages your package `Depends` on, `Imports` and `Suggests`. You can specify certain versions within for each of these.
 
-### [`packrat`](https://rstudio.github.io/packrat/)
+### packrat
 
-Packrat is a dependency management system for R. Use packrat to make your R projects more:
+[`packrat`](https://rstudio.github.io/packrat/) is a dependency management system for R. Use packrat to make your R projects more:
 
 * Isolated: Installing a new or updated package for one project won't break your other projects, and vice versa. That's because `packrat` gives each project its own private package library.
 * Portable: Easily transport your projects from one computer to another, even across different platforms. `packrat` makes it easy to install the packages your project depends on.
@@ -28,8 +28,8 @@ Packrat is a dependency management system for R. Use packrat to make your R proj
 
 See the [project page](http://rstudio.github.io/packrat/) for more information.
 
-### [`pkgsnap`](https://github.com/mangothecat/pkgsnap)
+### pkgsnap
 
-A more lightweight alternative to `packrat` is `pkgsnap` which allows you to backup and restore certain CRAN package versions. `pkgsnap` will create a snapshot of your installed CRAN packages with `snap()`, and then use `restore()` on another system to recreate exactly the same environment. Unfortunately `pkgsnap` isn't heavily developed.
+[`pkgsnap`](https://github.com/mangothecat/pkgsnap) is a more lightweight alternative to `packrat` which allows you to backup and restore certain CRAN package versions. `pkgsnap` will create a snapshot of your installed CRAN packages with `snap()`, and then use `restore()` on another system to recreate exactly the same environment. Unfortunately `pkgsnap` isn't heavily developed.
 
 ## Python
