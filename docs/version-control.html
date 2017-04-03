@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Data Science Campus Project Standards</title>
+  <meta name="description" content="Data Science Campus Project Standards">
+  <meta name="generator" content="bookdown 0.3.16 and GitBook 2.6.7">
+
+  <meta property="og:title" content="Data Science Campus Project Standards" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+  <meta name="github-repo" content="datasciencecampus/workflow" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Data Science Campus Project Standards" />
+  
+  
+  
+
+<meta name="author" content="Nathan Eastwood">
+
+
+<meta name="date" content="2017-04-03">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  
+  
+<link rel="prev" href="style.html">
+<link rel="next" href="functional-programming.html">
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Preface</a></li>
+<li class="chapter" data-level="1" data-path="Intro.html"><a href="Intro.html"><i class="fa fa-check"></i><b>1</b> Introduction</a></li>
+<li class="chapter" data-level="2" data-path="style.html"><a href="style.html"><i class="fa fa-check"></i><b>2</b> Programming Styles</a><ul>
+<li class="chapter" data-level="2.1" data-path="style.html"><a href="style.html#r"><i class="fa fa-check"></i><b>2.1</b> R</a><ul>
+<li class="chapter" data-level="2.1.1" data-path="style.html"><a href="style.html#tools"><i class="fa fa-check"></i><b>2.1.1</b> Tools</a></li>
+<li class="chapter" data-level="2.1.2" data-path="style.html"><a href="style.html#links"><i class="fa fa-check"></i><b>2.1.2</b> Links</a></li>
+</ul></li>
+<li class="chapter" data-level="2.2" data-path="style.html"><a href="style.html#python"><i class="fa fa-check"></i><b>2.2</b> Python</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="version-control.html"><a href="version-control.html"><i class="fa fa-check"></i><b>3</b> Version Control</a><ul>
+<li class="chapter" data-level="3.1" data-path="version-control.html"><a href="version-control.html#commit-best-practices"><i class="fa fa-check"></i><b>3.1</b> Commit best practices</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="functional-programming.html"><a href="functional-programming.html"><i class="fa fa-check"></i><b>4</b> Functional Programming</a></li>
+<li class="chapter" data-level="5" data-path="tests.html"><a href="tests.html"><i class="fa fa-check"></i><b>5</b> Code Testing</a><ul>
+<li class="chapter" data-level="5.1" data-path="tests.html"><a href="tests.html#r-1"><i class="fa fa-check"></i><b>5.1</b> R</a></li>
+<li class="chapter" data-level="5.2" data-path="tests.html"><a href="tests.html#python-1"><i class="fa fa-check"></i><b>5.2</b> Python</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="automated-testing.html"><a href="automated-testing.html"><i class="fa fa-check"></i><b>6</b> Automated Testing</a></li>
+<li class="chapter" data-level="7" data-path="code-coverage.html"><a href="code-coverage.html"><i class="fa fa-check"></i><b>7</b> Code Coverage</a></li>
+<li class="chapter" data-level="8" data-path="code-packaging.html"><a href="code-packaging.html"><i class="fa fa-check"></i><b>8</b> Code Packaging</a><ul>
+<li class="chapter" data-level="8.1" data-path="code-packaging.html"><a href="code-packaging.html#r-2"><i class="fa fa-check"></i><b>8.1</b> R</a></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="deps.html"><a href="deps.html"><i class="fa fa-check"></i><b>9</b> Dependency Management</a><ul>
+<li class="chapter" data-level="9.1" data-path="deps.html"><a href="deps.html#docker"><i class="fa fa-check"></i><b>9.1</b> Docker</a></li>
+<li class="chapter" data-level="9.2" data-path="deps.html"><a href="deps.html#r-3"><i class="fa fa-check"></i><b>9.2</b> R</a><ul>
+<li class="chapter" data-level="9.2.1" data-path="deps.html"><a href="deps.html#description-file"><i class="fa fa-check"></i><b>9.2.1</b> <code>DESCRIPTION</code> file</a></li>
+<li class="chapter" data-level="9.2.2" data-path="deps.html"><a href="deps.html#packrat"><i class="fa fa-check"></i><b>9.2.2</b> <a href="https://rstudio.github.io/packrat/"><code>packrat</code></a></a></li>
+<li class="chapter" data-level="9.2.3" data-path="deps.html"><a href="deps.html#pkgsnap"><i class="fa fa-check"></i><b>9.2.3</b> <a href="https://github.com/mangothecat/pkgsnap"><code>pkgsnap</code></a></a></li>
+</ul></li>
+<li class="chapter" data-level="9.3" data-path="deps.html"><a href="deps.html#python-2"><i class="fa fa-check"></i><b>9.3</b> Python</a></li>
+</ul></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Data Science Campus Project Standards</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="version-control" class="section level1">
+<h1><span class="header-section-number">3</span> Version Control</h1>
+<p>Few software engineering projects will begin without some form of version control and data science should be no different. Version control software allows us to track the three Ws: Who made Which change, and Why? There are various different version control tools such as <a href="https://git-scm.com/">Git</a>, <a href="https://subversion.apache.org/">SVN</a> and <a href="https://www.mercurial-scm.org/">Mercurial</a>, however within the Data Science Campus we use <a href="https://git-scm.com/"><code>git</code></a> as our version control software of choice.</p>
+<p>Git can be used locally on a single machine, on many networked machines or connected to many online repository services such as <a href="https://github.com/">GitHub</a>, <a href="https://about.gitlab.com/">GitLab</a> and <a href="https://bitbucket.org/">BitBucket</a>. Each of these services provides hosting for your version control repository, and makes the code open and easy to share with the world, or if necessary, private and shared with the Campus team only. We use GitHub within the Campus and have an <a href="https://github.com/datasciencecampus">organisation account</a> which allows us to use private repositories, please speak to another member of staff about getting help in joining the organisation.</p>
+<div id="commit-best-practices" class="section level2">
+<h2><span class="header-section-number">3.1</span> Commit best practices</h2>
+<p>Ideally, each commit should be minimal but complete. They should aim to solve a single specific problem with your code. This makes commits that you make much easier to understand but it also makes it easier to undo commits should you make an error. Leaving all commits until the end of the day is a <em>bad</em> idea as rather than being able to undo a single issue, you may lose an entire day’s work to solve your problem. When you think you have solved a bug, it is always a good idea to include a <a href="tests.html#tests">test</a> to confirm you are correct. Each commit message should be concise but present a clear message about what the commit achieved. There should be enough detail so you can remember (and understand) what was done. Ideally you should describe the why but not the what.</p>
+<div class="figure" style="text-align: center"><span id="fig:gitCommit"></span>
+<img src="img/git_commit.png" alt="Try to keep git commit messages as informative as possible" width="220" />
+<p class="caption">
+Figure 3.1: Try to keep git commit messages as informative as possible
+</p>
+</div>
+<p>Sticking to these standards will make it much easier to work with others. For example, if two people have changed the same file in the same place, it’ll be easier to resolve conflicts if the commits are small and it’s clear why each change was made and project newcomers can more easily understand the history by reading the commit logs. More importantly, if you can figure out exactly when a bug was introduced, you can easily understand what you were doing (and why!). Some really good advice is:</p>
+<blockquote>
+<p>You might think that because no one else will ever look at your repo, that writing good commit messages is not worth the effort. But keep in mind that you have one very important collaborator: future-you! If you spend a little time now polishing your commit messages, future-you will thank you if and when they need to do a post-mortem on a bug.</p>
+</blockquote>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="style.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="functional-programming.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script>
+require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": false,
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"download": null,
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+</body>
+
+</html>
