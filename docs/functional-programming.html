@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Data Science Campus Project Standards</title>
+  <meta name="description" content="Data Science Campus Project Standards">
+  <meta name="generator" content="bookdown 0.3.16 and GitBook 2.6.7">
+
+  <meta property="og:title" content="Data Science Campus Project Standards" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+  <meta name="github-repo" content="datasciencecampus/workflow" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Data Science Campus Project Standards" />
+  
+  
+  
+
+<meta name="author" content="Nathan Eastwood">
+
+
+<meta name="date" content="2017-04-03">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  
+  
+<link rel="prev" href="version-control.html">
+<link rel="next" href="tests.html">
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Preface</a></li>
+<li class="chapter" data-level="1" data-path="Intro.html"><a href="Intro.html"><i class="fa fa-check"></i><b>1</b> Introduction</a></li>
+<li class="chapter" data-level="2" data-path="style.html"><a href="style.html"><i class="fa fa-check"></i><b>2</b> Programming Styles</a><ul>
+<li class="chapter" data-level="2.1" data-path="style.html"><a href="style.html#r"><i class="fa fa-check"></i><b>2.1</b> R</a><ul>
+<li class="chapter" data-level="2.1.1" data-path="style.html"><a href="style.html#tools"><i class="fa fa-check"></i><b>2.1.1</b> Tools</a></li>
+<li class="chapter" data-level="2.1.2" data-path="style.html"><a href="style.html#links"><i class="fa fa-check"></i><b>2.1.2</b> Links</a></li>
+</ul></li>
+<li class="chapter" data-level="2.2" data-path="style.html"><a href="style.html#python"><i class="fa fa-check"></i><b>2.2</b> Python</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="version-control.html"><a href="version-control.html"><i class="fa fa-check"></i><b>3</b> Version Control</a><ul>
+<li class="chapter" data-level="3.1" data-path="version-control.html"><a href="version-control.html#commit-best-practices"><i class="fa fa-check"></i><b>3.1</b> Commit best practices</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="functional-programming.html"><a href="functional-programming.html"><i class="fa fa-check"></i><b>4</b> Functional Programming</a></li>
+<li class="chapter" data-level="5" data-path="tests.html"><a href="tests.html"><i class="fa fa-check"></i><b>5</b> Code Testing</a><ul>
+<li class="chapter" data-level="5.1" data-path="tests.html"><a href="tests.html#r-1"><i class="fa fa-check"></i><b>5.1</b> R</a></li>
+<li class="chapter" data-level="5.2" data-path="tests.html"><a href="tests.html#python-1"><i class="fa fa-check"></i><b>5.2</b> Python</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="automated-testing.html"><a href="automated-testing.html"><i class="fa fa-check"></i><b>6</b> Automated Testing</a></li>
+<li class="chapter" data-level="7" data-path="code-coverage.html"><a href="code-coverage.html"><i class="fa fa-check"></i><b>7</b> Code Coverage</a></li>
+<li class="chapter" data-level="8" data-path="code-packaging.html"><a href="code-packaging.html"><i class="fa fa-check"></i><b>8</b> Code Packaging</a><ul>
+<li class="chapter" data-level="8.1" data-path="code-packaging.html"><a href="code-packaging.html#r-2"><i class="fa fa-check"></i><b>8.1</b> R</a></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="deps.html"><a href="deps.html"><i class="fa fa-check"></i><b>9</b> Dependency Management</a><ul>
+<li class="chapter" data-level="9.1" data-path="deps.html"><a href="deps.html#docker"><i class="fa fa-check"></i><b>9.1</b> Docker</a></li>
+<li class="chapter" data-level="9.2" data-path="deps.html"><a href="deps.html#r-3"><i class="fa fa-check"></i><b>9.2</b> R</a><ul>
+<li class="chapter" data-level="9.2.1" data-path="deps.html"><a href="deps.html#description-file"><i class="fa fa-check"></i><b>9.2.1</b> <code>DESCRIPTION</code> file</a></li>
+<li class="chapter" data-level="9.2.2" data-path="deps.html"><a href="deps.html#packrat"><i class="fa fa-check"></i><b>9.2.2</b> <a href="https://rstudio.github.io/packrat/"><code>packrat</code></a></a></li>
+<li class="chapter" data-level="9.2.3" data-path="deps.html"><a href="deps.html#pkgsnap"><i class="fa fa-check"></i><b>9.2.3</b> <a href="https://github.com/mangothecat/pkgsnap"><code>pkgsnap</code></a></a></li>
+</ul></li>
+<li class="chapter" data-level="9.3" data-path="deps.html"><a href="deps.html#python-2"><i class="fa fa-check"></i><b>9.3</b> Python</a></li>
+</ul></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Data Science Campus Project Standards</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="functional-programming" class="section level1">
+<h1><span class="header-section-number">4</span> Functional Programming</h1>
+<p>foo bar</p>
+
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="version-control.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="tests.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script>
+require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": false,
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"download": null,
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+</body>
+
+</html>
