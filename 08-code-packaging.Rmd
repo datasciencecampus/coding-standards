@@ -1,0 +1,7 @@
+# Code Packaging
+
+When writing code for a project, that code should ideally be held within a self contained package or series of packages. This helps to manage [dependencies](#deps) on other packages, [code testing](#tests), documentation and more.
+
+## R
+
+For R, there is one major resource that you should make yourself familiar with: http://r-pkgs.had.co.nz/. This book should cover all the essentials you will need to know in order to write an R package. Once you have mastered this book, you may wish to consider the [Writing R Extensions](https://cran.r-project.org/doc/manuals/r-release/R-exts.html) manual, though this is a heavy read.
