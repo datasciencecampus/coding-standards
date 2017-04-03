@@ -1,12 +1,35 @@
 # Dependency Management {#deps}
 
+Dependency management systems are incredibly important, particularly in the world of analysis. Whenever we produce some code to perform statistical analysis or machine learning, we need to be able to recreate those results exactly. This could be the day after or the year after and we need to know which versions of which packages we must have installed on our machine. Updates to packages can produce breaking changes and our code may produce slightly different results, or worse yet, not run at all. Then installing a specific packages for a certain project may make code on other projects break.
+
+<blockquote class="twitter-tweet" data-lang="en-gb"><p lang="en" dir="ltr">That results can change so much with different pkg versions is scary (and ignored by many) <a href="https://t.co/wn5x3UBgQz">https://t.co/wn5x3UBgQz</a> <a href="https://twitter.com/hashtag/rstats?src=hash">#rstats</a> <a href="https://twitter.com/hashtag/reproducibility?src=hash">#reproducibility</a> <a href="https://t.co/Jp4ASOKC81">pic.twitter.com/Jp4ASOKC81</a></p>&mdash; F Rodriguez-Sanchez (@frod_san) <a href="https://twitter.com/frod_san/status/847085478469947392">29 March 2017</a></blockquote>
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+Moreover, you may be presented with someone else's code but without them explicitly stating which packages you need, it is not always obvious, and even then you still have the manual challenge of installing the correct versions of each package yourself. These packages may then end up being globally installed when you don't need them for any other project, therefore clogging up your system.
+
 ## Docker
 
 * [Rocker](https://github.com/rocker-org/rocker)
 
 ## R
 
-* [packrat](https://rstudio.github.io/packrat/)
-* [pkgsnap](https://github.com/mangothecat/pkgsnap)
+Keeping track of dependencies in R can be a chore, particularly when using lots of different packages such as those belonging to the `tidyverse`. There are however different packages which aim to help with this.
+
+### `DESCRIPTION` file
+This is the most basic way of maintanining dependencies in R, though it is not recommended - it is only part of the dependency management system you should employ. Each R package will have a `DESCRIPTION` file which should contain a list of packages your package `Depends` on, `Imports` and `Suggests`. You can specify certain versions within for each of these.
+
+### [`packrat`](https://rstudio.github.io/packrat/)
+
+Packrat is a dependency management system for R. Use packrat to make your R projects more:
+
+* Isolated: Installing a new or updated package for one project won't break your other projects, and vice versa. That's because `packrat` gives each project its own private package library.
+* Portable: Easily transport your projects from one computer to another, even across different platforms. `packrat` makes it easy to install the packages your project depends on.
+* Reproducible: `packrat` records the exact package versions you depend on, and ensures those exact versions are the ones that get installed wherever you go.
+
+See the [project page](http://rstudio.github.io/packrat/) for more information.
+
+### [`pkgsnap`](https://github.com/mangothecat/pkgsnap)
+
+A more lightweight alternative to `packrat` is `pkgsnap` which allows you to backup and restore certain CRAN package versions. `pkgsnap` will create a snapshot of your installed CRAN packages with `snap()`, and then use `restore()` on another system to recreate exactly the same environment. Unfortunately `pkgsnap` isn't heavily developed.
 
 ## Python
