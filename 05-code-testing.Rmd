@@ -5,3 +5,4 @@
 
 ## Python
 * [nosetools](http://nose.readthedocs.io/en/latest/)
+* [pytest](https://docs.pytest.org/en/latest/)
