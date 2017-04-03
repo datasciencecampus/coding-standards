@@ -2,6 +2,10 @@
 
 Make pretty code.
 
+## GitHub
+
+All GitHub repository names should follow the `kebab-case` naming convention.
+
 ## R
 
 ### Tools
