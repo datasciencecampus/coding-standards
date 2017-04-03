@@ -50,6 +50,7 @@
 
 
 
+<link rel="stylesheet" href="custom.css" type="text/css" />
 </head>
 
 <body>
@@ -65,11 +66,12 @@
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Preface</a></li>
 <li class="chapter" data-level="1" data-path="Intro.html"><a href="Intro.html"><i class="fa fa-check"></i><b>1</b> Introduction</a></li>
 <li class="chapter" data-level="2" data-path="style.html"><a href="style.html"><i class="fa fa-check"></i><b>2</b> Programming Styles</a><ul>
-<li class="chapter" data-level="2.1" data-path="style.html"><a href="style.html#r"><i class="fa fa-check"></i><b>2.1</b> R</a><ul>
-<li class="chapter" data-level="2.1.1" data-path="style.html"><a href="style.html#tools"><i class="fa fa-check"></i><b>2.1.1</b> Tools</a></li>
-<li class="chapter" data-level="2.1.2" data-path="style.html"><a href="style.html#links"><i class="fa fa-check"></i><b>2.1.2</b> Links</a></li>
+<li class="chapter" data-level="2.1" data-path="style.html"><a href="style.html#github"><i class="fa fa-check"></i><b>2.1</b> GitHub</a></li>
+<li class="chapter" data-level="2.2" data-path="style.html"><a href="style.html#r"><i class="fa fa-check"></i><b>2.2</b> R</a><ul>
+<li class="chapter" data-level="2.2.1" data-path="style.html"><a href="style.html#tools"><i class="fa fa-check"></i><b>2.2.1</b> Tools</a></li>
+<li class="chapter" data-level="2.2.2" data-path="style.html"><a href="style.html#links"><i class="fa fa-check"></i><b>2.2.2</b> Links</a></li>
 </ul></li>
-<li class="chapter" data-level="2.2" data-path="style.html"><a href="style.html#python"><i class="fa fa-check"></i><b>2.2</b> Python</a></li>
+<li class="chapter" data-level="2.3" data-path="style.html"><a href="style.html#python"><i class="fa fa-check"></i><b>2.3</b> Python</a></li>
 </ul></li>
 <li class="chapter" data-level="3" data-path="version-control.html"><a href="version-control.html"><i class="fa fa-check"></i><b>3</b> Version Control</a><ul>
 <li class="chapter" data-level="3.1" data-path="version-control.html"><a href="version-control.html#commit-best-practices"><i class="fa fa-check"></i><b>3.1</b> Commit best practices</a></li>
@@ -88,8 +90,8 @@
 <li class="chapter" data-level="9.1" data-path="deps.html"><a href="deps.html#docker"><i class="fa fa-check"></i><b>9.1</b> Docker</a></li>
 <li class="chapter" data-level="9.2" data-path="deps.html"><a href="deps.html#r-3"><i class="fa fa-check"></i><b>9.2</b> R</a><ul>
 <li class="chapter" data-level="9.2.1" data-path="deps.html"><a href="deps.html#description-file"><i class="fa fa-check"></i><b>9.2.1</b> <code>DESCRIPTION</code> file</a></li>
-<li class="chapter" data-level="9.2.2" data-path="deps.html"><a href="deps.html#packrat"><i class="fa fa-check"></i><b>9.2.2</b> <a href="https://rstudio.github.io/packrat/"><code>packrat</code></a></a></li>
-<li class="chapter" data-level="9.2.3" data-path="deps.html"><a href="deps.html#pkgsnap"><i class="fa fa-check"></i><b>9.2.3</b> <a href="https://github.com/mangothecat/pkgsnap"><code>pkgsnap</code></a></a></li>
+<li class="chapter" data-level="9.2.2" data-path="deps.html"><a href="deps.html#packrat"><i class="fa fa-check"></i><b>9.2.2</b> packrat</a></li>
+<li class="chapter" data-level="9.2.3" data-path="deps.html"><a href="deps.html#pkgsnap"><i class="fa fa-check"></i><b>9.2.3</b> pkgsnap</a></li>
 </ul></li>
 <li class="chapter" data-level="9.3" data-path="deps.html"><a href="deps.html#python-2"><i class="fa fa-check"></i><b>9.3</b> Python</a></li>
 </ul></li>
@@ -113,7 +115,7 @@
 <div id="deps" class="section level1">
 <h1><span class="header-section-number">9</span> Dependency Management</h1>
 <p>Dependency management systems are incredibly important, particularly in the world of analysis. Whenever we produce some code to perform statistical analysis or machine learning, we need to be able to recreate those results exactly. This could be the day after or the year after and we need to know which versions of which packages we must have installed on our machine. Updates to packages can produce breaking changes and our code may produce slightly different results, or worse yet, not run at all. Then installing a specific packages for a certain project may make code on other projects break.</p>
-<blockquote class="twitter-tweet" data-lang="en-gb">
+<blockquote class="twitter-tweet tw-align-center" data-lang="en-gb">
 <p lang="en" dir="ltr">
 That results can change so much with different pkg versions is scary (and ignored by many) <a href="https://t.co/wn5x3UBgQz">https://t.co/wn5x3UBgQz</a> <a href="https://twitter.com/hashtag/rstats?src=hash">#rstats</a> <a href="https://twitter.com/hashtag/reproducibility?src=hash">#reproducibility</a> <a href="https://t.co/Jp4ASOKC81">pic.twitter.com/Jp4ASOKC81</a>
 </p>
@@ -135,8 +137,8 @@ That results can change so much with different pkg versions is scary (and ignore
 <p>This is the most basic way of maintanining dependencies in R, though it is not recommended - it is only part of the dependency management system you should employ. Each R package will have a <code>DESCRIPTION</code> file which should contain a list of packages your package <code>Depends</code> on, <code>Imports</code> and <code>Suggests</code>. You can specify certain versions within for each of these.</p>
 </div>
 <div id="packrat" class="section level3">
-<h3><span class="header-section-number">9.2.2</span> <a href="https://rstudio.github.io/packrat/"><code>packrat</code></a></h3>
-<p>Packrat is a dependency management system for R. Use packrat to make your R projects more:</p>
+<h3><span class="header-section-number">9.2.2</span> packrat</h3>
+<p><a href="https://rstudio.github.io/packrat/"><code>packrat</code></a> is a dependency management system for R. Use packrat to make your R projects more:</p>
 <ul>
 <li>Isolated: Installing a new or updated package for one project won’t break your other projects, and vice versa. That’s because <code>packrat</code> gives each project its own private package library.</li>
 <li>Portable: Easily transport your projects from one computer to another, even across different platforms. <code>packrat</code> makes it easy to install the packages your project depends on.</li>
@@ -145,8 +147,8 @@ That results can change so much with different pkg versions is scary (and ignore
 <p>See the <a href="http://rstudio.github.io/packrat/">project page</a> for more information.</p>
 </div>
 <div id="pkgsnap" class="section level3">
-<h3><span class="header-section-number">9.2.3</span> <a href="https://github.com/mangothecat/pkgsnap"><code>pkgsnap</code></a></h3>
-<p>A more lightweight alternative to <code>packrat</code> is <code>pkgsnap</code> which allows you to backup and restore certain CRAN package versions. <code>pkgsnap</code> will create a snapshot of your installed CRAN packages with <code>snap()</code>, and then use <code>restore()</code> on another system to recreate exactly the same environment. Unfortunately <code>pkgsnap</code> isn’t heavily developed.</p>
+<h3><span class="header-section-number">9.2.3</span> pkgsnap</h3>
+<p><a href="https://github.com/mangothecat/pkgsnap"><code>pkgsnap</code></a> is a more lightweight alternative to <code>packrat</code> which allows you to backup and restore certain CRAN package versions. <code>pkgsnap</code> will create a snapshot of your installed CRAN packages with <code>snap()</code>, and then use <code>restore()</code> on another system to recreate exactly the same environment. Unfortunately <code>pkgsnap</code> isn’t heavily developed.</p>
 </div>
 </div>
 <div id="python-2" class="section level2">
