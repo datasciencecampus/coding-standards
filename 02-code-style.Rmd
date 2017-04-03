@@ -4,7 +4,7 @@ Make pretty code.
 
 ## GitHub
 
-All GitHub repository names should follow the `kebab-case` naming convention.
+All GitHub repository names should follow the `kebab-case` naming convention and be in lower case.
 
 ## R
 
