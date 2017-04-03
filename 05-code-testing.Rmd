@@ -1,3 +1,7 @@
-# Code Testing
+# Code Testing {#tests}
 
-foo bar
+## R
+* [testthat](https://github.com/hadley/testthat)
+
+## Python
+* [nosetools](http://nose.readthedocs.io/en/latest/)
