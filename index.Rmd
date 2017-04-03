@@ -8,7 +8,6 @@ output:
   bookdown::gitbook:
     config:
       sharing: no
-    css: custom.css
 documentclass: book
 ---
 
