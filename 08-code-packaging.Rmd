@@ -4,4 +4,6 @@ When writing code for a project, that code should ideally be held within a self 
 
 ## R
 
-For R, there is one major resource that you should make yourself familiar with: http://r-pkgs.had.co.nz/. This book should cover all the essentials you will need to know in order to write an R package. Once you have mastered this book, you may wish to consider the [Writing R Extensions](https://cran.r-project.org/doc/manuals/r-release/R-exts.html) manual, though this is a heavy read.
+For R, there is one major resource that you should make yourself familiar with: http://r-pkgs.had.co.nz/. This book should cover all the essentials you will need to know in order to write an R package. Once you have mastered this book, you may wish to consider the [Writing R Extensions](https://cran.r-project.org/doc/manuals/r-release/R-exts.html) manual, though this is a heavy read. When writing R packages, you should continually check the results of your `R CMD check` and remove any `NOTE`s, `WARNING`s and `ERROR`s, where possible. We should not ship broken code!
+
+## Python
