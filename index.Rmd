@@ -4,15 +4,14 @@ author: "Nathan Eastwood"
 date: "`r Sys.Date()`"
 site: "bookdown::bookdown_site"
 github-repo: datasciencecampus/workflow
-output:
-  bookdown::gitbook:
-    config:
-      sharing: no
-    css: custom.css
 documentclass: book
 ---
 
 # Preface {-}
+
+```{r logo, echo = FALSE}
+knitr::include_graphics("img/dsc.png")
+```
 
 The purpose of this document is to define correct coding standards and project best practices to be used within the Data Science Campus (DSC) at the Office for National Statistics (ONS).
 
