@@ -8,13 +8,13 @@ All GitHub repository names should follow the `kebab-case` naming convention and
 
 ## R
 
-Generally we will be sticking to [Hadley Wickham's R Style Guide](http://r-pkgs.had.co.nz/style.html) for all R code we write. Some important points to note are to try to stick to 80 characters per line (exceptions are made for `.Rmd` files or similar) and to use 2 spaces, not tabs!
+Generally we will be sticking to [Hadley Wickham's R Style Guide](http://r-pkgs.had.co.nz/style.html) for all R code we write. Some important points to note are to try to stick to 80 characters per line (exceptions are made for `.Rmd` files or similar) and to use 2 spaces, not tabs! With regards to naming conventions, some people prefer `snake_case` to `camelCase`; this is fine so long as you and any collaborators are consistent with your code.
 
 ### Tools
 
 The [`lintr`](https://github.com/jimhester/lintr) package is designed to help you stick to certain coding conventions. `lintr` can be executed as standalone or as part of build. It can integrated into RStudio, emacs/ess, vim etc. Using `lintr` will ensure we are all conforming to the same coding standards. Additionally, `lintr` can be [ran as part of](https://github.com/jimhester/lintr#testthat) your [`testthat` tests](#tests).
 
-Quick formatting to code can be applied using the [`formatR`](https://yihui.name/formatr/) package. The `formatR` package was designed to reformat R code to improve readability; the main workhorse is the function tidy_source(). Features include:
+Quick formatting to code can be applied using the [`formatR`](https://yihui.name/formatr/) package. The `formatR` package was designed to reformat R code to improve readability; the main workhorse is the function `tidy_source()`. Features include:
 
 * long lines of code and comments are reorganized into appropriately shorter ones
 * spaces and indent are added where necessary
