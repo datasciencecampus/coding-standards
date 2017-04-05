@@ -8,7 +8,7 @@ All GitHub repository names should follow the `kebab-case` naming convention and
 
 ## R
 
-Generally we will be sticking to [Hadley Wickham's R Style Guide](http://r-pkgs.had.co.nz/style.html) for all R code we write. Some important points to note are to try to stick to 80 characters per line (exceptions are made for `.Rmd` files or similar) and to use 2 spaces, not tabs! With regards to naming conventions, some people prefer `snake_case` to `camelCase`; this is fine so long as you and any collaborators are consistent with your code.
+Generally we will be sticking to [Hadley Wickham's R Style Guide](http://r-pkgs.had.co.nz/style.html) for all R code we write. Some important points to note are to try to stick to 80 characters per line (exceptions are made for `.Rmd` files or similar) and to use 2 spaces, not tabs! With regards to naming conventions, some people prefer `snake_case` where as others prefer `camelCase`; generally speaking either are fine so long as you and any collaborators are consistent with your code.
 
 ### Tools
 
