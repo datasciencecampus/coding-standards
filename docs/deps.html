@@ -93,8 +93,9 @@
 <li class="chapter" data-level="9.1" data-path="deps.html"><a href="deps.html#docker"><i class="fa fa-check"></i><b>9.1</b> Docker</a></li>
 <li class="chapter" data-level="9.2" data-path="deps.html"><a href="deps.html#r-4"><i class="fa fa-check"></i><b>9.2</b> R</a><ul>
 <li class="chapter" data-level="9.2.1" data-path="deps.html"><a href="deps.html#description-file"><i class="fa fa-check"></i><b>9.2.1</b> <code>DESCRIPTION</code> file</a></li>
-<li class="chapter" data-level="9.2.2" data-path="deps.html"><a href="deps.html#packrat"><i class="fa fa-check"></i><b>9.2.2</b> packrat</a></li>
-<li class="chapter" data-level="9.2.3" data-path="deps.html"><a href="deps.html#pkgsnap"><i class="fa fa-check"></i><b>9.2.3</b> pkgsnap</a></li>
+<li class="chapter" data-level="9.2.2" data-path="deps.html"><a href="deps.html#namespace-file"><i class="fa fa-check"></i><b>9.2.2</b> <code>NAMESPACE</code> file</a></li>
+<li class="chapter" data-level="9.2.3" data-path="deps.html"><a href="deps.html#packrat"><i class="fa fa-check"></i><b>9.2.3</b> packrat</a></li>
+<li class="chapter" data-level="9.2.4" data-path="deps.html"><a href="deps.html#pkgsnap"><i class="fa fa-check"></i><b>9.2.4</b> pkgsnap</a></li>
 </ul></li>
 <li class="chapter" data-level="9.3" data-path="deps.html"><a href="deps.html#python-3"><i class="fa fa-check"></i><b>9.3</b> Python</a></li>
 </ul></li>
@@ -139,8 +140,12 @@ That results can change so much with different pkg versions is scary (and ignore
 <h3><span class="header-section-number">9.2.1</span> <code>DESCRIPTION</code> file</h3>
 <p>This is the most basic way of maintanining dependencies in R, though it is not recommended - it is only part of the dependency management system you should employ. Each R package will have a <code>DESCRIPTION</code> file which should contain a list of packages your package <code>Depends</code> on, <code>Imports</code> and <code>Suggests</code>. You can specify certain versions within for each of these.</p>
 </div>
+<div id="namespace-file" class="section level3">
+<h3><span class="header-section-number">9.2.2</span> <code>NAMESPACE</code> file</h3>
+<p>Dependencies in R packages are maintained using the <code>NAMESPACE</code> file. You should never write these files by hand as they are tedious to maintain and this approach is prone to error. Instead, you should consider using the <code>Roxygen2</code> package which is detailed in the <a href="docs.html#docs">Code Documentation</a> section of this report.</p>
+</div>
 <div id="packrat" class="section level3">
-<h3><span class="header-section-number">9.2.2</span> packrat</h3>
+<h3><span class="header-section-number">9.2.3</span> packrat</h3>
 <p><a href="https://rstudio.github.io/packrat/"><code>packrat</code></a> is a dependency management system for R. Use packrat to make your R projects more:</p>
 <ul>
 <li>Isolated: Installing a new or updated package for one project won’t break your other projects, and vice versa. That’s because <code>packrat</code> gives each project its own private package library.</li>
@@ -150,7 +155,7 @@ That results can change so much with different pkg versions is scary (and ignore
 <p>See the <a href="http://rstudio.github.io/packrat/">project page</a> for more information.</p>
 </div>
 <div id="pkgsnap" class="section level3">
-<h3><span class="header-section-number">9.2.3</span> pkgsnap</h3>
+<h3><span class="header-section-number">9.2.4</span> pkgsnap</h3>
 <p><a href="https://github.com/mangothecat/pkgsnap"><code>pkgsnap</code></a> is a more lightweight alternative to <code>packrat</code> which allows you to backup and restore certain CRAN package versions. <code>pkgsnap</code> will create a snapshot of your installed CRAN packages with <code>snap()</code>, and then use <code>restore()</code> on another system to recreate exactly the same environment. Unfortunately <code>pkgsnap</code> isn’t heavily developed.</p>
 </div>
 </div>

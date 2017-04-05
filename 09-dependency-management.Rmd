@@ -18,6 +18,9 @@ Keeping track of dependencies in R can be a chore, particularly when using lots 
 ### `DESCRIPTION` file
 This is the most basic way of maintanining dependencies in R, though it is not recommended - it is only part of the dependency management system you should employ. Each R package will have a `DESCRIPTION` file which should contain a list of packages your package `Depends` on, `Imports` and `Suggests`. You can specify certain versions within for each of these.
 
+### `NAMESPACE` file
+Dependencies in R packages are maintained using the `NAMESPACE` file. You should never write these files by hand as they are tedious to maintain and this approach is prone to error. Instead, you should consider using the `Roxygen2` package which is detailed in the [Code Documentation](#docs) section of this report.
+
 ### packrat
 
 [`packrat`](https://rstudio.github.io/packrat/) is a dependency management system for R. Use packrat to make your R projects more:
