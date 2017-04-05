@@ -88,6 +88,7 @@
 <li class="chapter" data-level="7" data-path="code-coverage.html"><a href="code-coverage.html"><i class="fa fa-check"></i><b>7</b> Code Coverage</a></li>
 <li class="chapter" data-level="8" data-path="package.html"><a href="package.html"><i class="fa fa-check"></i><b>8</b> Code Packaging</a><ul>
 <li class="chapter" data-level="8.1" data-path="package.html"><a href="package.html#r-3"><i class="fa fa-check"></i><b>8.1</b> R</a></li>
+<li class="chapter" data-level="8.2" data-path="package.html"><a href="package.html#python-3"><i class="fa fa-check"></i><b>8.2</b> Python</a></li>
 </ul></li>
 <li class="chapter" data-level="9" data-path="deps.html"><a href="deps.html"><i class="fa fa-check"></i><b>9</b> Dependency Management</a><ul>
 <li class="chapter" data-level="9.1" data-path="deps.html"><a href="deps.html#docker"><i class="fa fa-check"></i><b>9.1</b> Docker</a></li>
@@ -97,7 +98,7 @@
 <li class="chapter" data-level="9.2.3" data-path="deps.html"><a href="deps.html#packrat"><i class="fa fa-check"></i><b>9.2.3</b> packrat</a></li>
 <li class="chapter" data-level="9.2.4" data-path="deps.html"><a href="deps.html#pkgsnap"><i class="fa fa-check"></i><b>9.2.4</b> pkgsnap</a></li>
 </ul></li>
-<li class="chapter" data-level="9.3" data-path="deps.html"><a href="deps.html#python-3"><i class="fa fa-check"></i><b>9.3</b> Python</a></li>
+<li class="chapter" data-level="9.3" data-path="deps.html"><a href="deps.html#python-4"><i class="fa fa-check"></i><b>9.3</b> Python</a></li>
 </ul></li>
 </ul>
 
@@ -121,7 +122,10 @@
 <p>When writing code for a project, that code should ideally be held within a self contained package or series of packages. This helps to manage <a href="deps.html#deps">dependencies</a> on other packages, <a href="tests.html#tests">code testing</a>, <a href="docs.html#docs">documentation</a> and more.</p>
 <div id="r-3" class="section level2">
 <h2><span class="header-section-number">8.1</span> R</h2>
-<p>For R, there is one major resource that you should make yourself familiar with: <a href="http://r-pkgs.had.co.nz/" class="uri">http://r-pkgs.had.co.nz/</a>. This book should cover all the essentials you will need to know in order to write an R package. Once you have mastered this book, you may wish to consider the <a href="https://cran.r-project.org/doc/manuals/r-release/R-exts.html">Writing R Extensions</a> manual, though this is a heavy read.</p>
+<p>For R, there is one major resource that you should make yourself familiar with: <a href="http://r-pkgs.had.co.nz/" class="uri">http://r-pkgs.had.co.nz/</a>. This book should cover all the essentials you will need to know in order to write an R package. Once you have mastered this book, you may wish to consider the <a href="https://cran.r-project.org/doc/manuals/r-release/R-exts.html">Writing R Extensions</a> manual, though this is a heavy read. When writing R packages, you should continually check the results of your <code>R CMD check</code> and remove any <code>NOTE</code>s, <code>WARNING</code>s and <code>ERROR</code>s, where possible. We should not ship broken code!</p>
+</div>
+<div id="python-3" class="section level2">
+<h2><span class="header-section-number">8.2</span> Python</h2>
 
 </div>
 </div>
