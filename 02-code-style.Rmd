@@ -8,16 +8,20 @@ All GitHub repository names should follow the `kebab-case` naming convention and
 
 ## R
 
+Generally we will be sticking to [Hadley Wickham's R Style Guide](http://r-pkgs.had.co.nz/style.html) for all R code we write. Some important points to note are to try to stick to 80 characters per line (exceptions are made for `.Rmd` files or similar) and to use 2 spaces, not tabs!
+
 ### Tools
 
-* [goodpractice](https://github.com/MangoTheCat/goodpractice): Give advice about good practices when building R packages. Advice includes functions and syntax to avoid, package structure, code complexity, code formatting, etc.
-    * [lintr](https://github.com/jimhester/lintr): Static code analysis for R. Can be executed standalone/part of build or integrated into rstudio, emacs/ess, vim etc.
-* [formatr](https://yihui.name/formatr/): Format R code automatically.
+The [`lintr`](https://github.com/jimhester/lintr) package is designed to help you stick to certain coding conventions. `lintr` can be executed as standalone or as part of build. It can integrated into RStudio, emacs/ess, vim etc. Using `lintr` will ensure we are all conforming to the same coding standards. Additionally, `lintr` can be [ran as part of](https://github.com/jimhester/lintr#testthat) your [`testthat` tests](#tests).
 
-### Links
+Quick formatting to code can be applied using the [`formatR`](https://yihui.name/formatr/) package. The `formatR` package was designed to reformat R code to improve readability; the main workhorse is the function tidy_source(). Features include:
 
-* [Hadley Wickham's R Style Guide](http://r-pkgs.had.co.nz/style.html)
+* long lines of code and comments are reorganized into appropriately shorter ones
+* spaces and indent are added where necessary
+* the number of spaces to indent the code (i.e. tab width) can be specified
+* an else statement in a separate line without the leading `}` will be moved one line back
+* `=` as an assignment operator can be replaced with `<-`
 
-* [Code Golf](http://codegolf.stackexchange.com/) :)
+The [`goodpractice`](https://github.com/MangoTheCat/goodpractice) is useful for giving advice about good practices when [building R packages](#package). Advice includes functions and syntax to avoid, package structure, code complexity, code formatting (using `lintr`), etc.
 
 ## Python
