@@ -88,14 +88,17 @@
 <li class="chapter" data-level="5.2" data-path="tests.html"><a href="tests.html#python-2"><i class="fa fa-check"></i><b>5.2</b> Python</a></li>
 </ul></li>
 <li class="chapter" data-level="6" data-path="automated-testing.html"><a href="automated-testing.html"><i class="fa fa-check"></i><b>6</b> Automated Testing</a></li>
-<li class="chapter" data-level="7" data-path="code-coverage.html"><a href="code-coverage.html"><i class="fa fa-check"></i><b>7</b> Code Coverage</a></li>
+<li class="chapter" data-level="7" data-path="code-coverage.html"><a href="code-coverage.html"><i class="fa fa-check"></i><b>7</b> Code Coverage</a><ul>
+<li class="chapter" data-level="7.1" data-path="code-coverage.html"><a href="code-coverage.html#codecov"><i class="fa fa-check"></i><b>7.1</b> Coverage Services</a></li>
+<li class="chapter" data-level="7.2" data-path="code-coverage.html"><a href="code-coverage.html#r-3"><i class="fa fa-check"></i><b>7.2</b> R</a></li>
+</ul></li>
 <li class="chapter" data-level="8" data-path="package.html"><a href="package.html"><i class="fa fa-check"></i><b>8</b> Code Packaging</a><ul>
-<li class="chapter" data-level="8.1" data-path="package.html"><a href="package.html#r-3"><i class="fa fa-check"></i><b>8.1</b> R</a></li>
+<li class="chapter" data-level="8.1" data-path="package.html"><a href="package.html#r-4"><i class="fa fa-check"></i><b>8.1</b> R</a></li>
 <li class="chapter" data-level="8.2" data-path="package.html"><a href="package.html#python-3"><i class="fa fa-check"></i><b>8.2</b> Python</a></li>
 </ul></li>
 <li class="chapter" data-level="9" data-path="deps.html"><a href="deps.html"><i class="fa fa-check"></i><b>9</b> Dependency Management</a><ul>
 <li class="chapter" data-level="9.1" data-path="deps.html"><a href="deps.html#docker"><i class="fa fa-check"></i><b>9.1</b> Docker</a></li>
-<li class="chapter" data-level="9.2" data-path="deps.html"><a href="deps.html#r-4"><i class="fa fa-check"></i><b>9.2</b> R</a><ul>
+<li class="chapter" data-level="9.2" data-path="deps.html"><a href="deps.html#r-5"><i class="fa fa-check"></i><b>9.2</b> R</a><ul>
 <li class="chapter" data-level="9.2.1" data-path="deps.html"><a href="deps.html#description-file"><i class="fa fa-check"></i><b>9.2.1</b> <code>DESCRIPTION</code> file</a></li>
 <li class="chapter" data-level="9.2.2" data-path="deps.html"><a href="deps.html#namespace-file"><i class="fa fa-check"></i><b>9.2.2</b> <code>NAMESPACE</code> file</a></li>
 <li class="chapter" data-level="9.2.3" data-path="deps.html"><a href="deps.html#packrat"><i class="fa fa-check"></i><b>9.2.3</b> packrat</a></li>
@@ -125,8 +128,35 @@
             <section class="normal" id="section-">
 <div id="code-coverage" class="section level1">
 <h1><span class="header-section-number">7</span> Code Coverage</h1>
-<p>foo bar</p>
+<p>Writing tests for our code we can ensure that it works as expected and check when changes to that code break pre-existing functionality. But how do we know whether we have tested each possible scenario for our functions? How do we know which lines of code are ran during our tests? This is where code coverage comes in. Code coverage is a measure of the amount of code being exercised by a set of tests. It is an indirect measure of test quality and completeness.</p>
+<p>For example, in the code below, we can see that lines 112-115 and 117-120 are not explicitly tested. In this case, we probably don’t need to worry very much, but on other occasions this might prompt us to write more tests.</p>
+<div class="figure" style="text-align: center"><span id="fig:codecov"></span>
+<img src="img/code_coverage.png" alt="Code Coverage" width="80%" />
+<p class="caption">
+Figure 7.1: Code Coverage
+</p>
+</div>
+<blockquote>
+<p>Measuring code coverage allows developers to asses their progress in quality checking their own (or their collaborators) code. Measuring code coverage allows code consumers to have confidence in the measures taken by the package authors to verify high code quality. – <a href="https://cran.r-project.org/web/packages/covr/vignettes/how_it_works.html#introduction">Jim Hester</a></p>
+</blockquote>
+<div id="codecov" class="section level2">
+<h2><span class="header-section-number">7.1</span> Coverage Services</h2>
+<ul>
+<li><a href="http://codecov.io">Codecov</a></li>
+<li><a href="http://coveralls.io">Coveralls</a></li>
+</ul>
+</div>
+<div id="r-3" class="section level2">
+<h2><span class="header-section-number">7.2</span> R</h2>
+<p><a href="https://github.com/jimhester/covr"><code>covr</code></a> allows the user to track and report code coverage for your package and (optionally) upload the results to a <a href="code-coverage.html#codecov">coverage service</a> like Codecov or Coveralls. <code>covr</code> works with both <code>RUnit</code> and <code>testthat</code>, though we are <a href="tests.html#tests">using <code>testthat</code> for our tests</a>. <code>covr</code> provides three functions to calculate test coverage:</p>
+<ul>
+<li><code>package_coverage()</code> performs coverage calculation on an R package (unit tests must be contained in the “tests” directory)</li>
+<li><code>file_coverage()</code> performs coverage calculation on one or more R scripts by executing one or more R scripts.</li>
+<li><code>function_coverage()</code> performs coverage calculation on a single named function, using an expression provided</li>
+</ul>
+<p>Please read the <a href="https://cran.r-project.org/web/packages/covr/vignettes/how_it_works.html">documentation</a> for more information on how <code>covr</code> works.</p>
 
+</div>
 </div>
             </section>
 
