@@ -33,8 +33,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   
   
-<link rel="prev" href="Intro.html">
-<link rel="next" href="version-control.html">
+<link rel="prev" href="code-coverage.html">
+<link rel="next" href="deps.html">
 
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -115,32 +115,12 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="style" class="section level1">
-<h1><span class="header-section-number">2</span> Programming Styles</h1>
-<p>Make pretty code.</p>
-<div id="github" class="section level2">
-<h2><span class="header-section-number">2.1</span> GitHub</h2>
-<p>All GitHub repository names should follow the <code>kebab-case</code> naming convention and be in lower case.</p>
-</div>
-<div id="r" class="section level2">
-<h2><span class="header-section-number">2.2</span> R</h2>
-<p>Generally we will be sticking to <a href="http://r-pkgs.had.co.nz/style.html">Hadley Wickham’s R Style Guide</a> for all R code we write. Some important points to note are to try to stick to 80 characters per line (exceptions are made for <code>.Rmd</code> files or similar) and to use 2 spaces, not tabs!</p>
-<div id="tools" class="section level3">
-<h3><span class="header-section-number">2.2.1</span> Tools</h3>
-<p>The <a href="https://github.com/jimhester/lintr"><code>lintr</code></a> package is designed to help you stick to certain coding conventions. <code>lintr</code> can be executed as standalone or as part of build. It can integrated into RStudio, emacs/ess, vim etc. Using <code>lintr</code> will ensure we are all conforming to the same coding standards. Additionally, <code>lintr</code> can be <a href="https://github.com/jimhester/lintr#testthat">ran as part of</a> your <a href="tests.html#tests"><code>testthat</code> tests</a>.</p>
-<p>Quick formatting to code can be applied using the <a href="https://yihui.name/formatr/"><code>formatR</code></a> package. The <code>formatR</code> package was designed to reformat R code to improve readability; the main workhorse is the function tidy_source(). Features include:</p>
-<ul>
-<li>long lines of code and comments are reorganized into appropriately shorter ones</li>
-<li>spaces and indent are added where necessary</li>
-<li>the number of spaces to indent the code (i.e. tab width) can be specified</li>
-<li>an else statement in a separate line without the leading <code>}</code> will be moved one line back</li>
-<li><code>=</code> as an assignment operator can be replaced with <code>&lt;-</code></li>
-</ul>
-<p>The <a href="https://github.com/MangoTheCat/goodpractice"><code>goodpractice</code></a> is useful for giving advice about good practices when <a href="package.html#package">building R packages</a>. Advice includes functions and syntax to avoid, package structure, code complexity, code formatting (using <code>lintr</code>), etc.</p>
-</div>
-</div>
-<div id="python" class="section level2">
-<h2><span class="header-section-number">2.3</span> Python</h2>
+<div id="package" class="section level1">
+<h1><span class="header-section-number">8</span> Code Packaging</h1>
+<p>When writing code for a project, that code should ideally be held within a self contained package or series of packages. This helps to manage <a href="deps.html#deps">dependencies</a> on other packages, <a href="tests.html#tests">code testing</a>, <a href="docs.html#docs">documentation</a> and more.</p>
+<div id="r-3" class="section level2">
+<h2><span class="header-section-number">8.1</span> R</h2>
+<p>For R, there is one major resource that you should make yourself familiar with: <a href="http://r-pkgs.had.co.nz/" class="uri">http://r-pkgs.had.co.nz/</a>. This book should cover all the essentials you will need to know in order to write an R package. Once you have mastered this book, you may wish to consider the <a href="https://cran.r-project.org/doc/manuals/r-release/R-exts.html">Writing R Extensions</a> manual, though this is a heavy read.</p>
 
 </div>
 </div>
@@ -149,8 +129,8 @@
           </div>
         </div>
       </div>
-<a href="Intro.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="version-control.html" class="navigation navigation-next " aria-label="Next page""><i class="fa fa-angle-right"></i></a>
+<a href="code-coverage.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="deps.html" class="navigation navigation-next " aria-label="Next page""><i class="fa fa-angle-right"></i></a>
 
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/lunr.js"></script>

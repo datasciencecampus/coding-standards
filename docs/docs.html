@@ -33,8 +33,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   
   
-<link rel="prev" href="Intro.html">
-<link rel="next" href="version-control.html">
+<link rel="prev" href="version-control.html">
+<link rel="next" href="tests.html">
 
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -115,32 +115,15 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="style" class="section level1">
-<h1><span class="header-section-number">2</span> Programming Styles</h1>
-<p>Make pretty code.</p>
-<div id="github" class="section level2">
-<h2><span class="header-section-number">2.1</span> GitHub</h2>
-<p>All GitHub repository names should follow the <code>kebab-case</code> naming convention and be in lower case.</p>
+<div id="docs" class="section level1">
+<h1><span class="header-section-number">4</span> Code Documentation</h1>
+<p>Documenting our code is an essential part of what we do. We should document our code to the point where someone else can view it and understand how it works and why. Documentation is also useful for future-you (so you remember what your functions were supposed to do), and for developers extending your code.</p>
+<div id="r-1" class="section level2">
+<h2><span class="header-section-number">4.1</span> R</h2>
+<p>When documenting functions in R, it is standard practice to use the <a href="https://cran.r-project.org/web/packages/roxygen2/index.html"><code>Roxygen2</code></a> package which not only helps to generate your manual (<code>.Rd</code>) files, but also manages your <code>NAMESPACE</code> file and the <code>Collate</code> field of the <code>DESCRIPTION</code> file. This integrates really nicely with R <a href="package.html#package">package building</a>. For more information on Roxygen2, see the Manual section of the <a href="http://r-pkgs.had.co.nz/man.html">R packages</a> book and the vignettes on the <a href="https://cran.r-project.org/web/packages/roxygen2/index.html">CRAN</a> package page.</p>
 </div>
-<div id="r" class="section level2">
-<h2><span class="header-section-number">2.2</span> R</h2>
-<p>Generally we will be sticking to <a href="http://r-pkgs.had.co.nz/style.html">Hadley Wickham’s R Style Guide</a> for all R code we write. Some important points to note are to try to stick to 80 characters per line (exceptions are made for <code>.Rmd</code> files or similar) and to use 2 spaces, not tabs!</p>
-<div id="tools" class="section level3">
-<h3><span class="header-section-number">2.2.1</span> Tools</h3>
-<p>The <a href="https://github.com/jimhester/lintr"><code>lintr</code></a> package is designed to help you stick to certain coding conventions. <code>lintr</code> can be executed as standalone or as part of build. It can integrated into RStudio, emacs/ess, vim etc. Using <code>lintr</code> will ensure we are all conforming to the same coding standards. Additionally, <code>lintr</code> can be <a href="https://github.com/jimhester/lintr#testthat">ran as part of</a> your <a href="tests.html#tests"><code>testthat</code> tests</a>.</p>
-<p>Quick formatting to code can be applied using the <a href="https://yihui.name/formatr/"><code>formatR</code></a> package. The <code>formatR</code> package was designed to reformat R code to improve readability; the main workhorse is the function tidy_source(). Features include:</p>
-<ul>
-<li>long lines of code and comments are reorganized into appropriately shorter ones</li>
-<li>spaces and indent are added where necessary</li>
-<li>the number of spaces to indent the code (i.e. tab width) can be specified</li>
-<li>an else statement in a separate line without the leading <code>}</code> will be moved one line back</li>
-<li><code>=</code> as an assignment operator can be replaced with <code>&lt;-</code></li>
-</ul>
-<p>The <a href="https://github.com/MangoTheCat/goodpractice"><code>goodpractice</code></a> is useful for giving advice about good practices when <a href="package.html#package">building R packages</a>. Advice includes functions and syntax to avoid, package structure, code complexity, code formatting (using <code>lintr</code>), etc.</p>
-</div>
-</div>
-<div id="python" class="section level2">
-<h2><span class="header-section-number">2.3</span> Python</h2>
+<div id="python-1" class="section level2">
+<h2><span class="header-section-number">4.2</span> Python</h2>
 
 </div>
 </div>
@@ -149,8 +132,8 @@
           </div>
         </div>
       </div>
-<a href="Intro.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="version-control.html" class="navigation navigation-next " aria-label="Next page""><i class="fa fa-angle-right"></i></a>
+<a href="version-control.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="tests.html" class="navigation navigation-next " aria-label="Next page""><i class="fa fa-angle-right"></i></a>
 
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/lunr.js"></script>
