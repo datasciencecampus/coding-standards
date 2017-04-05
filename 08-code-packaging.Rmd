@@ -1,6 +1,6 @@
-# Code Packaging
+# Code Packaging {#package}
 
-When writing code for a project, that code should ideally be held within a self contained package or series of packages. This helps to manage [dependencies](#deps) on other packages, [code testing](#tests), documentation and more.
+When writing code for a project, that code should ideally be held within a self contained package or series of packages. This helps to manage [dependencies](#deps) on other packages, [code testing](#tests), [documentation](#docs) and more.
 
 ## R
 
