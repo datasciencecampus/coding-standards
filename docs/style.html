@@ -6,9 +6,8 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>Data Science Campus Project Standards</title>
-  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
   <meta name="description" content="Data Science Campus Project Standards">
-  <meta name="generator" content="bookdown 0.3 and GitBook 2.6.7">
+  <meta name="generator" content="bookdown 0.3.16 and GitBook 2.6.7">
 
   <meta property="og:title" content="Data Science Campus Project Standards" />
   <meta property="og:type" content="book" />
@@ -26,7 +25,7 @@
 <meta name="author" content="Nathan Eastwood">
 
 
-<meta name="date" content="2017-04-06">
+<meta name="date" content="2017-04-10">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -35,7 +34,6 @@
   
 <link rel="prev" href="Intro.html">
 <link rel="next" href="version-control.html">
-
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -93,6 +91,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 </head>
 
 <body>
+
 
 
   <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
@@ -175,6 +174,12 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <div id="r" class="section level2">
 <h2><span class="header-section-number">2.2</span> R</h2>
 <p>Generally we will be sticking to <a href="http://r-pkgs.had.co.nz/style.html">Hadley Wickham’s R Style Guide</a> for all R code we write. Some important points to note are to try to stick to 80 characters per line (exceptions are made for <code>.Rmd</code> files or similar) and to use 2 spaces, not tabs! With regards to naming conventions, some people prefer <code>snake_case</code> where as others prefer <code>camelCase</code>; generally speaking either are fine so long as you and any collaborators are consistent with your code.</p>
+<p>Some quick notes on what <em>not</em> to do when programming in R:</p>
+<ul>
+<li>Don’t use <code>attach()</code></li>
+<li>Use <code>seq_along()</code> over <code>1:length(x)</code> when writing loops</li>
+<li>Use <code>library()</code>, not <code>require()</code>, <a href="https://yihui.name/en/2014/07/library-vs-require/">unless you need to</a></li>
+</ul>
 <div id="tools" class="section level3">
 <h3><span class="header-section-number">2.2.1</span> Tools</h3>
 <p>The <a href="https://github.com/jimhester/lintr"><code>lintr</code></a> package is designed to help you stick to certain coding conventions. <code>lintr</code> can be executed as standalone or as part of build. It can integrated into RStudio, emacs/ess, vim etc. Using <code>lintr</code> will ensure we are all conforming to the same coding standards. Additionally, <code>lintr</code> can be <a href="https://github.com/jimhester/lintr#testthat">ran as part of</a> your <a href="tests.html#tests"><code>testthat</code> tests</a>.</p>
@@ -283,8 +288,9 @@ list_2 <span class="op">=</span> [ elem_1
         </div>
       </div>
 <a href="Intro.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="version-control.html" class="navigation navigation-next " aria-label="Next page""><i class="fa fa-angle-right"></i></a>
-
+<a href="version-control.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/lunr.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
