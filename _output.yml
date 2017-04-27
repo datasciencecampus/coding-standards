@@ -1,0 +1,14 @@
+output:
+  bookdown::gitbook:
+    config:
+      sharing: no
+      toc:
+        collapse: none
+        before: |
+          <li><a href="./">DSC Coding Standards</a></li>
+        after: |
+          <li><a href="https://github.com/datasciencecampus/coding-standards" target="blank">Source on GitHub</a></li>
+    css: rsrc/style/custom.css
+    highlight: espresso
+    includes:
+        before_body: rsrc/html/heading.html
