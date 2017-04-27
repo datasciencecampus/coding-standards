@@ -1,0 +1,268 @@
+# Other Languages
+
+## Haskell
+
+For Haskell we recommend Johan
+Tibell's
+[style guide](https://github.com/tibbe/haskell-style-guide/blob/master/haskell-style.md).
+This style guide is similar to the designs we choose for implementing python
+code and is a good fit for Campus projects.
+
+
+Data Science Campus projects are managed using `cabal` as the main preference.
+However, `stack` is also suitable. So long as the project can be passed on and
+compiles then whichever tool you use to sandbox your work is fine.
+
+It is recommended that you keep your GHC up to date and document which version
+your program is to be compiled with.
+
+Key points from the above style guide are included below.
+
+
+##### Line Length {-}
+
+Maximum line length is *80 characters*.
+
+##### Indentation {-} 
+
+Tabs are illegal.  Use spaces for indenting. Indent your code blocks with *4
+spaces*. Indent the `where` keyword two spaces to set it apart from the rest of
+the code and indent the definitions in a `where` clause 2 spaces.
+
+
+##### Pragmas {-}
+
+Put pragmas immediately following the function they apply to.
+Example:
+
+```haskell
+id :: a -> a
+id x = x
+{-# INLINE id #-}
+```
+
+In the case of data type definitions you must put the pragma before
+the type it applies to.  Example:
+
+```haskell
+data Array e = Array
+    {-# UNPACK #-} !Int
+    !ByteArray
+```
+
+##### Export Lists {-}
+
+Format export lists as follows:
+
+```haskell
+module Data.Set
+    (
+      -- * The @Set@ type
+      Set
+    , empty
+    , singleton
+
+      -- * Querying
+    , member
+    ) where
+```
+
+##### If-then-else clauses {-}
+
+Generally, guards and pattern matches should be preferred over if-then-else
+clauses, where possible.  Short cases should usually be put on a single line
+(when line length allows it).
+
+When writing non-monadic code (i.e. when not using `do`) and guards 
+and pattern matches can't be used, you can align if-then-else clauses
+like you would normal expressions:
+
+```haskell
+foo = if ...
+      then ...
+      else ...
+```
+
+Otherwise, you should be consistent with the 4-spaces indent rule, and the
+`then` and the `else` keyword should be aligned.  Examples:
+
+```haskell
+foo = do
+    someCode
+    if condition
+        then someMoreCode
+        else someAlternativeCode
+```
+
+```haskell
+foo = bar $ \qux -> if predicate qux
+    then doSomethingSilly
+    else someOtherCode
+```
+
+The same rule applies to nested do blocks:
+
+```haskell
+foo = do
+    instruction <- decodeInstruction
+    skip <- load Memory.skip
+    if skip == 0x0000
+        then do
+            execute instruction
+            addCycles $ instructionCycles instruction
+        else do
+            store Memory.skip 0x0000
+            addCycles 1
+```
+
+##### Case expressions {-}
+
+A case expression can be indented using the two following style:
+
+```haskell
+foobar = case something of
+    Just j  -> foo
+    Nothing -> bar
+```
+
+Align the `->` arrows when it helps readability.
+
+#### Imports {-}
+
+
+Imports should be grouped in the following order:
+
+1. standard library imports
+2. related third party imports
+3. local application/library specific imports
+
+Put a blank line between each group of imports.  The imports in each
+group should be sorted alphabetically, by module name.
+
+Always use explicit import lists or `qualified` imports for standard
+and third party libraries.  This makes the code more robust against
+changes in these libraries.  Exception: The Prelude.
+
+
+#### Comments {-}
+
+
+##### Punctuation {-}
+
+Write proper sentences; start with a capital letter and use proper
+punctuation.
+
+##### Top-Level Definitions {-}
+
+Comment every top level function (particularly exported functions),
+and provide a type signature; use Haddock syntax in the comments.
+Comment every exported data type.  Function example:
+
+```haskell
+-- | Send a message on a socket.  The socket must be in a connected
+-- state.  Returns the number of bytes sent.  Applications are
+-- responsible for ensuring that all data has been sent.
+send :: Socket      -- ^ Connected socket
+     -> ByteString  -- ^ Data to send
+     -> IO Int      -- ^ Bytes sent
+```
+
+For functions the documentation should give enough information to
+apply the function without looking at the function's definition.
+
+Record example:
+
+```haskell
+-- | Bla bla bla.
+data Person = Person
+    { age  :: !Int     -- ^ Age
+    , name :: !String  -- ^ First name
+    }
+```
+
+For fields that require longer comments format them like so:
+
+```haskell
+data Record = Record
+    { -- | This is a very very very long comment that is split over
+      -- multiple lines.
+      field1 :: !Text
+
+      -- | This is a second very very very long comment that is split
+      -- over multiple lines.
+    , field2 :: !Int
+    }
+```
+
+##### End-of-Line Comments {-}
+
+Separate end-of-line comments from the code using 2 spaces.  Align
+comments for data type definitions.  Some examples:
+
+```haskell
+data Parser = Parser
+    !Int         -- Current position
+    !ByteString  -- Remaining input
+
+foo :: Int -> Int
+foo n = salt * 32 + 9
+  where
+    salt = 453645243  -- Magic hash salt.
+```
+
+#### Links {-}
+
+Use in-line links economically.  You are encouraged to add links for
+API names.  It is not necessary to add links for all API names in a
+Haddock comment.  We therefore recommend adding a link to an API name
+if:
+
+* The user might actually want to click on it for more information (in
+  your judgment), and
+
+* Only for the first occurrence of each API name in the comment (don't
+  bother repeating a link)
+
+
+#### Naming {-}
+
+Use camel case (e.g. `functionName`) when naming functions and upper
+camel case (e.g. `DataType`) when naming data types.
+
+For readability reasons, don't capitalize all letters when using an
+abbreviation.  For example, write `HttpServer` instead of
+`HTTPServer`.  Exception: Two letter abbreviations, e.g. `IO`.
+
+
+##### Modules {-}
+
+Use singular when naming modules e.g. use `Data.Map` and
+`Data.ByteString.Internal` instead of `Data.Maps` and
+`Data.ByteString.Internals`.
+
+
+##### Point-free style {-}
+
+Avoid over-using point-free style.  For example, this is hard to read:
+
+```haskell
+-- Bad:
+f = (g .) . h
+```
+
+#### Warnings {-}
+
+Code should be compilable with `-Wall -Werror`.  There should be no
+warnings.
+
+
+#### Exception handling {-}
+
+The [safe-exceptions library](https://haskell-lang.org/library/safe-exceptions) should be used. The library contains guidance on its use. 
+
+
+## Java
+
+###### TODO ######
+
+

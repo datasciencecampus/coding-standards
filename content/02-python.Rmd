@@ -1,0 +1,101 @@
+# Python
+
+The below are the most immediate features that ONS code should be expected to adhere to. The recommendations
+in [Effective Python](http://www.effectivepython.com) give a more in-depth idea of how to write good python code and align with our recommendations.
+
+
+## Style guide
+
+The following sections outline conditions on python code produced for sharing.
+
+#### Spacing {-}
+Tabs are illegal. All indentation should be in spaces and each indent should be either 2 or 4 spaces.
+
+#### Line length {-}
+No lines should exceed 80 characters. 
+
+#### Blank lines {-}
+
+* __1 line__: There should be one line between blocks of code, the exceptions are where two lines are recommended.
+* __2 lines__: Start and end of function definitions, import blocks, headers, and class definitions should have 2 lines clearning them.
+  
+*Good*
+
+```python
+import os
+      
+      
+class Goober(object):
+  """|
+    docstrings are good
+    docstrings are great
+  """
+  def __init__(self):
+    pass
+    
+ 
+def main():
+  pass
+```
+
+*Bad*
+
+```python
+import os
+class Goober(object):
+  """|
+    docstrings are good
+    docstrings are great
+  """
+  def __init__(self):
+    pass
+    
+def main():
+  pass
+```
+
+#### Data declarations {-} 
+Elements must align, either in leading or following comma notation. Some examples:
+
+```python
+list_1 = [
+  elem_1,
+  elem_2,
+  elem_3
+]
+
+
+list_2 = [ elem_1
+         , elem_2
+         , elem_3
+         ] 
+```
+
+#### List comprehensions {-}
+There should be no more than 2 statements included in any list comprehension. If the comprehension is exceeding this length then break it out into a loop or multiple statements. It might make sense to you now but when somebody else comes to read it they will hate you if you don't.
+
+#### Exceptions {-}
+Do not raise base exceptions. Create your own classes which extend them and manage your errors correctly.
+
+#### Imports {-}
+Imports should be grouped, at the top of your file and placed in the following order.
+
+1. standard library imports
+2. related third party imports
+3. local application/library specific imports
+
+Put a blank line between each group of imports and include a comment to show the group.  The imports in each group should be sorted alphabetically, by module name.
+
+Always use explicit import lists or `qualified` imports for standard and third party libraries.  This makes the code more robust against changes in these libraries.  Exception: The Prelude.
+
+#### Type hinting {-} 
+Where possible use [type hinting](https://docs.python.org/3/library/typing.html) as per[PEP484](https://www.python.org/dev/peps/pep-0484/). It will make your code more verbose, easier to debug and handle when others come to inherit it.
+
+
+
+## Package Management
+
+###### TODO ######
+
+
+
