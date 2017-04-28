@@ -78,7 +78,7 @@ def main():
 #### Data declarations {-} 
 Elements must align, either in leading or following comma notation. Some examples:
 
-```python
+```{python}
 list_1 = [
   elem_1,
   elem_2,
@@ -116,10 +116,10 @@ Where possible use [type hinting](https://docs.python.org/3/library/typing.html)
 
 
 ## Package Management
-Programs should be packages using one of two methods. First is the python solution [virtualenv](https://python-guide-pt-br.readthedocs.io/en/latest/dev/virtualenvs/) which allows you to bundle a python executable and all of the needed packages with your program or through the use of [docker](#link-to-docker) which facilitates a wider use case and means you do not need to handle exceptions caused by windows and linux libraries and executables not being available on the system. 
+Programs should be packages using one of two methods. First is the python solution [virtualenv](https://python-guide-pt-br.readthedocs.io/en/latest/dev/virtualenvs/) which allows you to bundle a python executable and all of the needed packages with your program or through the use of docker which facilitates a wider use case and means you do not need to handle exceptions caused by windows and linux libraries and executables not being available on the system. 
 
 
-## Choosing a container
+### Choosing a container
 What virtualenv does is simple, it copies your system python installation and supporting packages to the project root directory and then updates the python paths (when you run `activate.sh`) to point to this version. You are then free to `pip install` to your heart's content without making global changes. Whilst this allows you to localise your python packages it does not incorporate outside dependencies. If you need a running LAMP server, redis, spark or some other external tool you need to add them into your project. You essentially end up polluting your environment with project-specific dependencies. This is *not* optimal for large projects with database back ends or heavier dependencies and docker should be used. 
 
 Docker allows you to run a virtual machine in a single thread. This allows you to pre-bundle all of the requirements you have into a single image which can be activated and allow all dependencies to be mimicked on a larger system scale. It leads to a fewer _dependency spaghetti_ issues because you can also use system software management tools such as [brew](https://brew.sh) to install things into your images.

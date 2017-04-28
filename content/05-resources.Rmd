@@ -1,5 +1,17 @@
 # Resources
 
+## Setting up your Mac
+
+A script has been prepared for the Campus which will set up MacOS machines with
+the necessary tools to start in data science. Obtain the content of
+the [repository](https://github.com/nathaneastwood/brew-ds) and then follow the
+instructions in README.md to install the packages.
+
+You may also wish to join the Data Science
+Campus [github organisation](https://github.com/datasciencecampus) 
+
+
+
 ## Online Learning Materials
 
 #### Python
