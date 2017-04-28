@@ -20,3 +20,8 @@ Sticking to these standards will make it much easier to work with others. For ex
 
 > You might think that because no one else will ever look at your repo, that writing good commit messages is not worth the effort. But keep in mind that you have one very important collaborator: future-you! If you spend a little time now polishing your commit messages, future-you will thank you if and when they need to do a post-mortem on a bug. -- [Hadley Wickham](http://r-pkgs.had.co.nz/git.html#commit-best-practices)
 
+
+# Packaging projects
+
+###### TODO {-}
+We say use docker. Its pretty good. 
