@@ -1,0 +1,35 @@
+# Resources
+
+## Online Learning Materials
+
+#### Python
+
+* [codeacademy](https://www.codecademy.com/learn/python)
+* [DataCamp](https://www.datacamp.com/courses/tech:python)
+
+
+#### R
+
+* [Coursera](https://www.coursera.org/courses?languages=en&query=R)
+* [tryR](http://tryr.codeschool.com)
+* [DataCamp](https://www.datacamp.com/courses/tech:python)
+
+
+#### Docker
+
+* [Docker for beginners](https://prakhar.me/docker-curriculum/)
+* [hackr.io](https://hackr.io/tutorials/learn-docker)
+
+
+#### Documentation
+
+* [Markdown](http://www.markdowntutorial.com/)
+* [Rmarkdown](http://rmarkdown.rstudio.com/)
+* [Bookdown](https://bookdown.org/yihui/bookdown/)
+* [Org mode](http://orgmode.org/worg/)
+
+
+#### Version Control
+
+* [try git](https://try.github.io)
+* [git tutorial](https://git-scm.com/docs/gittutorial)

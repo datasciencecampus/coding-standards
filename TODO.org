@@ -1,0 +1,6 @@
+* TODO
+- [ ] Write about docker for project/package delivery 
+- [ ] Add training materials section for preferred tools
+- [ ] Project skeletons to be linked to resources
+- [ ] Consider separate repo for project skeletons
+  
