@@ -1,7 +1,6 @@
 # Python
 
-The below are the most immediate features that ONS code should be expected to adhere to. The recommendations
-in [Effective Python](http://www.effectivepython.com) give a more in-depth idea of how to write good python code and align with our recommendations.
+The below are the most immediate features that your code should have. The recommendations in [Effective Python](http://www.effectivepython.com) give a more in-depth idea of how to write good python code and align with our recommendations.
 
 
 ## Style guide
@@ -9,19 +8,46 @@ in [Effective Python](http://www.effectivepython.com) give a more in-depth idea 
 The following sections outline conditions on python code produced for sharing.
 
 #### Spacing {-}
-Tabs are illegal. All indentation should be in spaces and each indent should be either 2 or 4 spaces.
+Tabs are illegal. All indentation should be in spaces and each level of indent should be either 2 or 4 spaces, but constant throughout the project at either 2 or 4.
+
+```{python}
+import numpy as np
+
+
+# Good
+def main():
+  """
+    This is my docstring
+    There are many others like it
+    But this one is mine
+  """
+  def third_eye(n):
+    return 3 * np.eye(n)
+ 
+ 
+# Bad
+def main():
+  """
+    This is my docstring
+    There are many others like it
+    But this one is mine
+  """
+  def third_eye(n):
+      return 3 * np.eye(n)
+```
 
 #### Line length {-}
-No lines should exceed 80 characters. 
+No lines should exceed 80 characters. If you find yourself running out of room on a line then it might be a good sign that you need to write a function. 
+
 
 #### Blank lines {-}
 
 * __1 line__: There should be one line between blocks of code, the exceptions are where two lines are recommended.
 * __2 lines__: Start and end of function definitions, import blocks, headers, and class definitions should have 2 lines clearning them.
-  
-*Good*
+
 
 ```python
+# Good
 import os
       
       
@@ -36,11 +62,8 @@ class Goober(object):
  
 def main():
   pass
-```
-
-*Bad*
-
-```python
+  
+# Bad
 import os
 class Goober(object):
   """|
@@ -74,8 +97,10 @@ list_2 = [ elem_1
 #### List comprehensions {-}
 There should be no more than 2 statements included in any list comprehension. If the comprehension is exceeding this length then break it out into a loop or multiple statements. It might make sense to you now but when somebody else comes to read it they will hate you if you don't.
 
+
 #### Exceptions {-}
-Do not raise base exceptions. Create your own classes which extend them and manage your errors correctly.
+Do not raise base exceptions. Create your own classes which extend them and manage your errors in a meaningful way.
+
 
 #### Imports {-}
 Imports should be grouped, at the top of your file and placed in the following order.
@@ -84,12 +109,11 @@ Imports should be grouped, at the top of your file and placed in the following o
 2. related third party imports
 3. local application/library specific imports
 
-Put a blank line between each group of imports and include a comment to show the group.  The imports in each group should be sorted alphabetically, by module name.
+Put a blank line between each group of imports and include a comment to show the group.  The imports in each group should be sorted alphabetically, by module name. Try to avoid `from foo import *` unless you can be absolutely certain that there are no clashes in the namespace. It may be more suitable to give your module a short alias, such as `import pandas as pd`.
 
-Always use explicit import lists or `qualified` imports for standard and third party libraries.  This makes the code more robust against changes in these libraries.  Exception: The Prelude.
 
 #### Type hinting {-} 
-Where possible use [type hinting](https://docs.python.org/3/library/typing.html) as per[PEP484](https://www.python.org/dev/peps/pep-0484/). It will make your code more verbose, easier to debug and handle when others come to inherit it.
+Where possible use [type hinting](https://docs.python.org/3/library/typing.html) as per[PEP484](https://www.python.org/dev/peps/pep-0484/). It will make your code more verbose as well as easier to debug and handle.
 
 
 
