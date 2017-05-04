@@ -13,7 +13,7 @@ All GitHub repository names should follow the `kebab-case` naming convention and
 Ideally, each commit should be minimal but complete. They should aim to solve a single specific problem with your code. This makes commits that you make much easier to understand but it also makes it easier to undo commits should you make an error. Leaving all changes to be committed at the end of the day is a *bad* idea as rather than being able to undo a single issue, you may lose an entire day's work to solve your problem. When you think you have solved a bug, it is always a good idea to include a [test](#tests) to confirm you are correct. Each commit message should be concise but present a clear message about what the commit achieved. There should be enough detail so you can remember (and understand) what was done. Ideally you should describe the why but not the what.
 
 ```{r gitCommit, echo = FALSE, fig.cap = "Try to keep git commit messages as informative as possible"}
-knitr::include_graphics("img/git_commit.png")
+knitr::include_graphics("rsrc/img/git_commit.png")
 ```
 
 Sticking to these standards will make it much easier to work with others. For example, if two people have changed the same file in the same place, it’ll be easier to resolve conflicts if the commits are small and it’s clear why each change was made and project newcomers can more easily understand the history by reading the commit logs. More importantly, if you can figure out exactly when a bug was introduced, you can easily understand what you were doing (and why!). Some really good advice is:
