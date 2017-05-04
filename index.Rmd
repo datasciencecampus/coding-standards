@@ -1,9 +1,8 @@
 --- 
-title: "Data Science Campus Project Standards"
-author: "Nathan Eastwood"
-date: "`r Sys.Date()`"
+title: "Data Science Project Coding Standards"
+date: "`r format(Sys.Date(), '%d-%b-%Y')`"
 site: "bookdown::bookdown_site"
-github-repo: datasciencecampus/workflow
+github-repo: datasciencecampus/coding-standards
 documentclass: book
 ---
 
