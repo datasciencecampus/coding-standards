@@ -33,8 +33,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   
   
-<link rel="prev" href="other-languages.html">
-<link rel="next" href="packaging-projects.html">
+<link rel="prev" href="packaging-projects.html">
+
 
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -153,21 +153,54 @@ code > span.in { color: #0066ff; font-weight: bold; font-style: italic; } /* Inf
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="version-control" class="section level1">
-<h1><span class="header-section-number">4</span> Version Control</h1>
-<p>Few software engineering projects will begin without some form of version control and data science should be no different. Version control software allows us to track the three Ws: Who made Which change, and Why? There are various different version control tools such as <a href="https://git-scm.com/">Git</a>, <a href="https://subversion.apache.org/">SVN</a> and <a href="https://www.mercurial-scm.org/">Mercurial</a>, however within the Data Science Campus we use <a href="https://git-scm.com/"><code>git</code></a> as our version control software of choice.</p>
-<p>Git can be used locally on a single machine, on many networked machines or connected to many online repository services such as <a href="https://github.com/">GitHub</a>, <a href="https://about.gitlab.com/">GitLab</a> and <a href="https://bitbucket.org/">BitBucket</a>. Each of these services provides hosting for your version control repository, and makes the code open and easy to share with the world, or if necessary, private and shared with the Campus team only. We use GitHub within the Campus and have an <a href="https://github.com/datasciencecampus">organisation account</a> which allows us to use private repositories, please speak to another member of staff about getting help in joining the organisation.</p>
-<div id="name-conventions" class="section level2">
-<h2><span class="header-section-number">4.1</span> Name conventions</h2>
-<p>All GitHub repository names should follow the <code>kebab-case</code> naming convention and be in lower case.</p>
+<div id="resources" class="section level1">
+<h1><span class="header-section-number">6</span> Resources</h1>
+<div id="setting-up-your-mac" class="section level2">
+<h2><span class="header-section-number">6.1</span> Setting up your Mac</h2>
+<p>A script has been prepared for the Campus which will set up MacOS machines with the necessary tools to start in data science. Obtain the content of the <a href="https://github.com/nathaneastwood/brew-ds">repository</a> and then follow the instructions in README.md to install the packages.</p>
+<p>You may also wish to join the Data Science Campus <a href="https://github.com/datasciencecampus">github organisation</a></p>
 </div>
-<div id="commit-best-practices" class="section level2">
-<h2><span class="header-section-number">4.2</span> Commit best practices</h2>
-<p>Ideally, each commit should be minimal but complete. They should aim to solve a single specific problem with your code. This makes commits that you make much easier to understand but it also makes it easier to undo commits should you make an error. Leaving all changes to be committed at the end of the day is a <em>bad</em> idea as rather than being able to undo a single issue, you may lose an entire day’s work to solve your problem. When you think you have solved a bug, it is always a good idea to include a <a href="#tests">test</a> to confirm you are correct. Each commit message should be concise but present a clear message about what the commit achieved. There should be enough detail so you can remember (and understand) what was done. Ideally you should describe the why but not the what.</p>
-<p>Sticking to these standards will make it much easier to work with others. For example, if two people have changed the same file in the same place, it’ll be easier to resolve conflicts if the commits are small and it’s clear why each change was made and project newcomers can more easily understand the history by reading the commit logs. More importantly, if you can figure out exactly when a bug was introduced, you can easily understand what you were doing (and why!). Some really good advice is:</p>
-<blockquote>
-<p>You might think that because no one else will ever look at your repo, that writing good commit messages is not worth the effort. But keep in mind that you have one very important collaborator: future-you! If you spend a little time now polishing your commit messages, future-you will thank you if and when they need to do a post-mortem on a bug. – <a href="http://r-pkgs.had.co.nz/git.html#commit-best-practices">Hadley Wickham</a></p>
-</blockquote>
+<div id="online-learning-materials" class="section level2">
+<h2><span class="header-section-number">6.2</span> Online Learning Materials</h2>
+<div id="python-1" class="section level4">
+<h4><span class="header-section-number">6.2.0.1</span> Python</h4>
+<ul>
+<li><a href="https://www.codecademy.com/learn/python">codeacademy</a></li>
+<li><a href="https://www.datacamp.com/courses/tech:python">DataCamp</a></li>
+</ul>
+</div>
+<div id="r-1" class="section level4">
+<h4><span class="header-section-number">6.2.0.2</span> R</h4>
+<ul>
+<li><a href="https://www.coursera.org/courses?languages=en&amp;query=R">Coursera</a></li>
+<li><a href="http://tryr.codeschool.com">tryR</a></li>
+<li><a href="https://www.datacamp.com/courses/tech:python">DataCamp</a></li>
+</ul>
+</div>
+<div id="docker" class="section level4">
+<h4><span class="header-section-number">6.2.0.3</span> Docker</h4>
+<ul>
+<li><a href="https://prakhar.me/docker-curriculum/">Docker for beginners</a></li>
+<li><a href="https://hackr.io/tutorials/learn-docker">hackr.io</a></li>
+</ul>
+</div>
+<div id="documentation" class="section level4">
+<h4><span class="header-section-number">6.2.0.4</span> Documentation</h4>
+<ul>
+<li><a href="http://www.markdowntutorial.com/">Markdown</a></li>
+<li><a href="http://rmarkdown.rstudio.com/">Rmarkdown</a></li>
+<li><a href="https://bookdown.org/yihui/bookdown/">Bookdown</a></li>
+<li><a href="http://orgmode.org/worg/">Org mode</a></li>
+</ul>
+</div>
+<div id="version-control-1" class="section level4">
+<h4><span class="header-section-number">6.2.0.5</span> Version Control</h4>
+<ul>
+<li><a href="https://try.github.io">try git</a></li>
+<li><a href="https://git-scm.com/docs/gittutorial">git tutorial</a></li>
+</ul>
+
+</div>
 </div>
 </div>
             </section>
@@ -175,8 +208,8 @@ code > span.in { color: #0066ff; font-weight: bold; font-style: italic; } /* Inf
           </div>
         </div>
       </div>
-<a href="other-languages.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="packaging-projects.html" class="navigation navigation-next " aria-label="Next page""><i class="fa fa-angle-right"></i></a>
+<a href="packaging-projects.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+
 
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/lunr.js"></script>

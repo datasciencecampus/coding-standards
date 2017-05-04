@@ -1,3 +1,0 @@
-# Automated Testing
-
-foo bar

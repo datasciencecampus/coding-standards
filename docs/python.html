@@ -33,8 +33,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   
   
-<link rel="prev" href="other-languages.html">
-<link rel="next" href="packaging-projects.html">
+<link rel="prev" href="r.html">
+<link rel="next" href="other-languages.html">
 
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -153,21 +153,126 @@ code > span.in { color: #0066ff; font-weight: bold; font-style: italic; } /* Inf
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="version-control" class="section level1">
-<h1><span class="header-section-number">4</span> Version Control</h1>
-<p>Few software engineering projects will begin without some form of version control and data science should be no different. Version control software allows us to track the three Ws: Who made Which change, and Why? There are various different version control tools such as <a href="https://git-scm.com/">Git</a>, <a href="https://subversion.apache.org/">SVN</a> and <a href="https://www.mercurial-scm.org/">Mercurial</a>, however within the Data Science Campus we use <a href="https://git-scm.com/"><code>git</code></a> as our version control software of choice.</p>
-<p>Git can be used locally on a single machine, on many networked machines or connected to many online repository services such as <a href="https://github.com/">GitHub</a>, <a href="https://about.gitlab.com/">GitLab</a> and <a href="https://bitbucket.org/">BitBucket</a>. Each of these services provides hosting for your version control repository, and makes the code open and easy to share with the world, or if necessary, private and shared with the Campus team only. We use GitHub within the Campus and have an <a href="https://github.com/datasciencecampus">organisation account</a> which allows us to use private repositories, please speak to another member of staff about getting help in joining the organisation.</p>
-<div id="name-conventions" class="section level2">
-<h2><span class="header-section-number">4.1</span> Name conventions</h2>
-<p>All GitHub repository names should follow the <code>kebab-case</code> naming convention and be in lower case.</p>
+<div id="python" class="section level1">
+<h1><span class="header-section-number">2</span> Python</h1>
+<p>The below are the most immediate features that your code should have. The recommendations in <a href="http://www.effectivepython.com">Effective Python</a> give a more in-depth idea of how to write good python code and align with our recommendations.</p>
+<div id="style-guide" class="section level2">
+<h2><span class="header-section-number">2.1</span> Style guide</h2>
+<p>The following sections outline conditions on python code produced for sharing.</p>
+<div id="spacing-1" class="section level4 unnumbered">
+<h4>Spacing</h4>
+<p>Tabs are illegal. All indentation should be in spaces and each level of indent should be either 2 or 4 spaces, but constant throughout the project at either 2 or 4.</p>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="im">import</span> numpy <span class="im">as</span> np
+
+
+<span class="co"># Good</span>
+<span class="kw">def</span> main():
+  <span class="co">&quot;&quot;&quot;</span>
+<span class="co">    This is my docstring</span>
+<span class="co">    There are many others like it</span>
+<span class="co">    But this one is mine</span>
+<span class="co">  &quot;&quot;&quot;</span>
+  <span class="kw">def</span> third_eye(n):
+    <span class="cf">return</span> <span class="dv">3</span> <span class="op">*</span> np.eye(n)
+ 
+ 
+<span class="co"># Bad</span>
+<span class="kw">def</span> main():
+  <span class="co">&quot;&quot;&quot;</span>
+<span class="co">    This is my docstring</span>
+<span class="co">    There are many others like it</span>
+<span class="co">    But this one is mine</span>
+<span class="co">  &quot;&quot;&quot;</span>
+  <span class="kw">def</span> third_eye(n):
+      <span class="cf">return</span> <span class="dv">3</span> <span class="op">*</span> np.eye(n)</code></pre></div>
 </div>
-<div id="commit-best-practices" class="section level2">
-<h2><span class="header-section-number">4.2</span> Commit best practices</h2>
-<p>Ideally, each commit should be minimal but complete. They should aim to solve a single specific problem with your code. This makes commits that you make much easier to understand but it also makes it easier to undo commits should you make an error. Leaving all changes to be committed at the end of the day is a <em>bad</em> idea as rather than being able to undo a single issue, you may lose an entire day’s work to solve your problem. When you think you have solved a bug, it is always a good idea to include a <a href="#tests">test</a> to confirm you are correct. Each commit message should be concise but present a clear message about what the commit achieved. There should be enough detail so you can remember (and understand) what was done. Ideally you should describe the why but not the what.</p>
-<p>Sticking to these standards will make it much easier to work with others. For example, if two people have changed the same file in the same place, it’ll be easier to resolve conflicts if the commits are small and it’s clear why each change was made and project newcomers can more easily understand the history by reading the commit logs. More importantly, if you can figure out exactly when a bug was introduced, you can easily understand what you were doing (and why!). Some really good advice is:</p>
-<blockquote>
-<p>You might think that because no one else will ever look at your repo, that writing good commit messages is not worth the effort. But keep in mind that you have one very important collaborator: future-you! If you spend a little time now polishing your commit messages, future-you will thank you if and when they need to do a post-mortem on a bug. – <a href="http://r-pkgs.had.co.nz/git.html#commit-best-practices">Hadley Wickham</a></p>
-</blockquote>
+<div id="line-length-1" class="section level4 unnumbered">
+<h4>Line length</h4>
+<p>No lines should exceed 80 characters. If you find yourself running out of room on a line then it might be a good sign that you need to write a function.</p>
+</div>
+<div id="blank-lines" class="section level4 unnumbered">
+<h4>Blank lines</h4>
+<ul>
+<li><strong>1 line</strong>: There should be one line between blocks of code, the exceptions are where two lines are recommended.</li>
+<li><strong>2 lines</strong>: Start and end of function definitions, import blocks, headers, and class definitions should have 2 lines clearning them.</li>
+</ul>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="co"># Good</span>
+<span class="im">import</span> os
+      
+      
+<span class="kw">class</span> Goober(<span class="bu">object</span>):
+  <span class="co">&quot;&quot;&quot;|</span>
+<span class="co">    docstrings are good</span>
+<span class="co">    docstrings are great</span>
+<span class="co">  &quot;&quot;&quot;</span>
+  <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>):
+    <span class="cf">pass</span>
+    
+ 
+<span class="kw">def</span> main():
+  <span class="cf">pass</span>
+  
+<span class="co"># Bad</span>
+<span class="im">import</span> os
+<span class="kw">class</span> Goober(<span class="bu">object</span>):
+  <span class="co">&quot;&quot;&quot;|</span>
+<span class="co">    docstrings are good</span>
+<span class="co">    docstrings are great</span>
+<span class="co">  &quot;&quot;&quot;</span>
+  <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>):
+    <span class="cf">pass</span>
+    
+<span class="kw">def</span> main():
+  <span class="cf">pass</span></code></pre></div>
+</div>
+<div id="data-declarations" class="section level4 unnumbered">
+<h4>Data declarations</h4>
+<p>Elements must align, either in leading or following comma notation. Some examples:</p>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python">list_1 <span class="op">=</span> [
+  elem_1,
+  elem_2,
+  elem_3
+]
+
+
+list_2 <span class="op">=</span> [ elem_1
+         , elem_2
+         , elem_3
+         ] </code></pre></div>
+</div>
+<div id="list-comprehensions" class="section level4 unnumbered">
+<h4>List comprehensions</h4>
+<p>There should be no more than 2 statements included in any list comprehension. If the comprehension is exceeding this length then break it out into a loop or multiple statements. It might make sense to you now but when somebody else comes to read it they will hate you if you don’t.</p>
+</div>
+<div id="exceptions" class="section level4 unnumbered">
+<h4>Exceptions</h4>
+<p>Do not raise base exceptions. Create your own classes which extend them and manage your errors in a meaningful way.</p>
+</div>
+<div id="imports" class="section level4 unnumbered">
+<h4>Imports</h4>
+<p>Imports should be grouped, at the top of your file and placed in the following order.</p>
+<ol style="list-style-type: decimal">
+<li>standard library imports</li>
+<li>related third party imports</li>
+<li>local application/library specific imports</li>
+</ol>
+<p>Put a blank line between each group of imports and include a comment to show the group. The imports in each group should be sorted alphabetically, by module name. Try to avoid <code>from foo import *</code> unless you can be absolutely certain that there are no clashes in the namespace. It may be more suitable to give your module a short alias, such as <code>import pandas as pd</code>.</p>
+</div>
+<div id="type-hinting" class="section level4 unnumbered">
+<h4>Type hinting</h4>
+<p>Where possible use <a href="https://docs.python.org/3/library/typing.html">type hinting</a> as per<a href="https://www.python.org/dev/peps/pep-0484/">PEP484</a>. It will make your code more verbose as well as easier to debug and handle.</p>
+</div>
+</div>
+<div id="package-management" class="section level2">
+<h2><span class="header-section-number">2.2</span> Package Management</h2>
+<p>Programs should be packages using one of two methods. First is the python solution <a href="https://python-guide-pt-br.readthedocs.io/en/latest/dev/virtualenvs/">virtualenv</a> which allows you to bundle a python executable and all of the needed packages with your program or through the use of docker which facilitates a wider use case and means you do not need to handle exceptions caused by windows and linux libraries and executables not being available on the system.</p>
+<div id="choosing-a-container" class="section level3">
+<h3><span class="header-section-number">2.2.1</span> Choosing a container</h3>
+<p>What virtualenv does is simple, it copies your system python installation and supporting packages to the project root directory and then updates the python paths (when you run <code>activate.sh</code>) to point to this version. You are then free to <code>pip install</code> to your heart’s content without making global changes. Whilst this allows you to localise your python packages it does not incorporate outside dependencies. If you need a running LAMP server, redis, spark or some other external tool you need to add them into your project. You essentially end up polluting your environment with project-specific dependencies. This is <em>not</em> optimal for large projects with database back ends or heavier dependencies and docker should be used.</p>
+<p>Docker allows you to run a virtual machine in a single thread. This allows you to pre-bundle all of the requirements you have into a single image which can be activated and allow all dependencies to be mimicked on a larger system scale. It leads to a fewer <em>dependency spaghetti</em> issues because you can also use system software management tools such as <a href="https://brew.sh">brew</a> to install things into your images.</p>
+<p>Docker is also suitable in the use case where virtualenv is a good choice. As such docker is the recommended solution for packaging up python projects. However, it is still quite a young tool and there may be a few kinks that have you falling back on your old, faithful virtualenv. Use your judgement as to which is best in your given situation and easiest to share. Docker is preferred but is not required.</p>
+
+</div>
 </div>
 </div>
             </section>
@@ -175,8 +280,8 @@ code > span.in { color: #0066ff; font-weight: bold; font-style: italic; } /* Inf
           </div>
         </div>
       </div>
-<a href="other-languages.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="packaging-projects.html" class="navigation navigation-next " aria-label="Next page""><i class="fa fa-angle-right"></i></a>
+<a href="r.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="other-languages.html" class="navigation navigation-next " aria-label="Next page""><i class="fa fa-angle-right"></i></a>
 
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/lunr.js"></script>

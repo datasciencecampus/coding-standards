@@ -1,8 +1,0 @@
-# Introduction {#Intro}
-
-When working in a scientific environment, one should always strive to make their work as reproducible as possible. This is no different when working with code and data. There are two essential reasons for this:
-
-* to show evidence of the correctness of your results
-* to enable others to make use of our methods and results
-
-This document aims to provide guidance on how we can achieve this reproducible nirvana. For additional information, please refer to the [rOpenSci documents](http://ropensci.github.io/reproducibility-guide/).

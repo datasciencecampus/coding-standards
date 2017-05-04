@@ -1,8 +1,0 @@
-# Code Documentation {#docs}
-
-Documenting our code is an essential part of what we do. We should document our code to the point where someone else can view it and understand how it works and why. Documentation is also useful for future-you (so you remember what your functions were supposed to do), and for developers extending your code.
-
-## R
-When documenting functions in R, it is standard practice to use the [`Roxygen2`](https://cran.r-project.org/web/packages/roxygen2/index.html) package which not only helps to generate your manual (`.Rd`) files, but also manages your `NAMESPACE` file and the `Collate` field of the `DESCRIPTION` file. This integrates really nicely with R [package building](#package). For more information on Roxygen2, see the Manual section of the [R packages](http://r-pkgs.had.co.nz/man.html) book and the vignettes on the [CRAN](https://cran.r-project.org/web/packages/roxygen2/index.html) package page.
-
-## Python

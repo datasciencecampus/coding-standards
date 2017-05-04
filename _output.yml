@@ -8,4 +8,5 @@ output:
           <li><a href="./">DSC Coding Standards</a></li>
         after: |
           <li><a href="https://github.com/datasciencecampus/coding-standards" target="blank">Source on GitHub</a></li>
-    css: custom.css
+    css: rsrc/style/custom.css
+    highlight: espresso

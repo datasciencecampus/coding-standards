@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Data Science Campus Project Standards</title>
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+  <meta name="description" content="Data Science Campus Project Standards">
+  <meta name="generator" content="bookdown 0.3 and GitBook 2.6.7">
+
+  <meta property="og:title" content="Data Science Campus Project Standards" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+  <meta name="github-repo" content="datasciencecampus/workflow" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Data Science Campus Project Standards" />
+  
+  
+  
+
+<meta name="author" content="Nathan Eastwood">
+
+
+<meta name="date" content="2017-05-04">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  
+  
+<link rel="prev" href="python.html">
+<link rel="next" href="version-control.html">
+
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<style type="text/css">
+div.sourceCode { overflow-x: auto; }
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; background-color: #2a211c; color: #bdae9d; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; background-color: #2a211c; color: #bdae9d; border-right: 1px solid #bdae9d; }
+td.sourceCode { padding-left: 5px; }
+pre, code { color: #bdae9d; background-color: #2a211c; }
+code > span.kw { color: #43a8ed; font-weight: bold; } /* Keyword */
+code > span.dt { text-decoration: underline; } /* DataType */
+code > span.dv { color: #44aa43; } /* DecVal */
+code > span.bn { color: #44aa43; } /* BaseN */
+code > span.fl { color: #44aa43; } /* Float */
+code > span.ch { color: #049b0a; } /* Char */
+code > span.st { color: #049b0a; } /* String */
+code > span.co { color: #0066ff; font-style: italic; } /* Comment */
+code > span.al { color: #ffff00; } /* Alert */
+code > span.fu { color: #ff9358; font-weight: bold; } /* Function */
+code > span.er { color: #ffff00; font-weight: bold; } /* Error */
+code > span.wa { color: #ffff00; font-weight: bold; } /* Warning */
+code > span.cn { } /* Constant */
+code > span.sc { color: #049b0a; } /* SpecialChar */
+code > span.vs { color: #049b0a; } /* VerbatimString */
+code > span.ss { color: #049b0a; } /* SpecialString */
+code > span.im { } /* Import */
+code > span.va { } /* Variable */
+code > span.cf { color: #43a8ed; font-weight: bold; } /* ControlFlow */
+code > span.op { } /* Operator */
+code > span.bu { } /* BuiltIn */
+code > span.ex { } /* Extension */
+code > span.pp { font-weight: bold; } /* Preprocessor */
+code > span.at { } /* Attribute */
+code > span.do { color: #0066ff; font-style: italic; } /* Documentation */
+code > span.an { color: #0066ff; font-weight: bold; font-style: italic; } /* Annotation */
+code > span.co { color: #0066ff; font-weight: bold; font-style: italic; } /* Comment */
+code > span.in { color: #0066ff; font-weight: bold; font-style: italic; } /* Information */
+</style>
+
+<link rel="stylesheet" href="rsrc/style/custom.css" type="text/css" />
+</head>
+
+<body>
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">DSC Coding Standards</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Preface</a></li>
+<li class="chapter" data-level="1" data-path="r.html"><a href="r.html"><i class="fa fa-check"></i><b>1</b> R</a><ul>
+<li class="chapter" data-level="1.1" data-path="r.html"><a href="r.html#style"><i class="fa fa-check"></i><b>1.1</b> Programming Styles</a></li>
+<li class="chapter" data-level="1.2" data-path="r.html"><a href="r.html#tools"><i class="fa fa-check"></i><b>1.2</b> Tools</a></li>
+<li class="chapter" data-level="1.3" data-path="r.html"><a href="r.html#docs-r"><i class="fa fa-check"></i><b>1.3</b> Documentating Code</a></li>
+<li class="chapter" data-level="1.4" data-path="r.html"><a href="r.html#tests-r"><i class="fa fa-check"></i><b>1.4</b> Testing</a></li>
+<li class="chapter" data-level="1.5" data-path="r.html"><a href="r.html#coverage-r"><i class="fa fa-check"></i><b>1.5</b> Code Coverage</a></li>
+<li class="chapter" data-level="1.6" data-path="r.html"><a href="r.html#package-r"><i class="fa fa-check"></i><b>1.6</b> Code Packaging</a></li>
+<li class="chapter" data-level="1.7" data-path="r.html"><a href="r.html#deps-r"><i class="fa fa-check"></i><b>1.7</b> Dependency Management</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="python.html"><a href="python.html"><i class="fa fa-check"></i><b>2</b> Python</a><ul>
+<li class="chapter" data-level="2.1" data-path="python.html"><a href="python.html#style-guide"><i class="fa fa-check"></i><b>2.1</b> Style guide</a></li>
+<li class="chapter" data-level="2.2" data-path="python.html"><a href="python.html#package-management"><i class="fa fa-check"></i><b>2.2</b> Package Management</a><ul>
+<li class="chapter" data-level="2.2.1" data-path="python.html"><a href="python.html#choosing-a-container"><i class="fa fa-check"></i><b>2.2.1</b> Choosing a container</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="other-languages.html"><a href="other-languages.html"><i class="fa fa-check"></i><b>3</b> Other Languages</a><ul>
+<li class="chapter" data-level="3.1" data-path="other-languages.html"><a href="other-languages.html#haskell"><i class="fa fa-check"></i><b>3.1</b> Haskell</a></li>
+<li class="chapter" data-level="3.2" data-path="other-languages.html"><a href="other-languages.html#java"><i class="fa fa-check"></i><b>3.2</b> Java</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="version-control.html"><a href="version-control.html"><i class="fa fa-check"></i><b>4</b> Version Control</a><ul>
+<li class="chapter" data-level="4.1" data-path="version-control.html"><a href="version-control.html#name-conventions"><i class="fa fa-check"></i><b>4.1</b> Name conventions</a></li>
+<li class="chapter" data-level="4.2" data-path="version-control.html"><a href="version-control.html#commit-best-practices"><i class="fa fa-check"></i><b>4.2</b> Commit best practices</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="packaging-projects.html"><a href="packaging-projects.html"><i class="fa fa-check"></i><b>5</b> Packaging projects</a></li>
+<li class="chapter" data-level="6" data-path="resources.html"><a href="resources.html"><i class="fa fa-check"></i><b>6</b> Resources</a><ul>
+<li class="chapter" data-level="6.1" data-path="resources.html"><a href="resources.html#setting-up-your-mac"><i class="fa fa-check"></i><b>6.1</b> Setting up your Mac</a></li>
+<li class="chapter" data-level="6.2" data-path="resources.html"><a href="resources.html#online-learning-materials"><i class="fa fa-check"></i><b>6.2</b> Online Learning Materials</a></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/datasciencecampus/coding-standards" target="blank">Source on GitHub</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Data Science Campus Project Standards</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="other-languages" class="section level1">
+<h1><span class="header-section-number">3</span> Other Languages</h1>
+<div id="haskell" class="section level2">
+<h2><span class="header-section-number">3.1</span> Haskell</h2>
+<p>For Haskell we recommend Johan Tibell’s <a href="https://github.com/tibbe/haskell-style-guide/blob/master/haskell-style.md">style guide</a>. This style guide is similar to the designs we choose for implementing python code and is a good fit for Campus projects.</p>
+<p>Data Science Campus projects are managed using <code>cabal</code> as the main preference. However, <code>stack</code> is also suitable. So long as the project can be passed on and compiles then whichever tool you use to sandbox your work is fine.</p>
+<p>It is recommended that you keep your GHC up to date and document which version your program is to be compiled with.</p>
+<p>Key points from the above style guide are included below.</p>
+<div id="line-length-2" class="section level5 unnumbered">
+<h5>Line Length</h5>
+<p>Maximum line length is <em>80 characters</em>.</p>
+</div>
+<div id="indentation" class="section level5 unnumbered">
+<h5>Indentation</h5>
+<p>Tabs are illegal. Use spaces for indenting. Indent your code blocks with <em>4 spaces</em>. Indent the <code>where</code> keyword two spaces to set it apart from the rest of the code and indent the definitions in a <code>where</code> clause 2 spaces.</p>
+</div>
+<div id="pragmas" class="section level5 unnumbered">
+<h5>Pragmas</h5>
+<p>Put pragmas immediately following the function they apply to. Example:</p>
+<div class="sourceCode"><pre class="sourceCode haskell"><code class="sourceCode haskell">id<span class="ot"> ::</span> a <span class="ot">-&gt;</span> a
+id x <span class="fu">=</span> x
+<span class="ot">{-# INLINE id #-}</span></code></pre></div>
+<p>In the case of data type definitions you must put the pragma before the type it applies to. Example:</p>
+<div class="sourceCode"><pre class="sourceCode haskell"><code class="sourceCode haskell"><span class="kw">data</span> <span class="dt">Array</span> e <span class="fu">=</span> <span class="dt">Array</span>
+    <span class="ot">{-# UNPACK #-}</span> <span class="fu">!</span><span class="dt">Int</span>
+    <span class="fu">!</span><span class="dt">ByteArray</span></code></pre></div>
+</div>
+<div id="export-lists" class="section level5 unnumbered">
+<h5>Export Lists</h5>
+<p>Format export lists as follows:</p>
+<div class="sourceCode"><pre class="sourceCode haskell"><code class="sourceCode haskell"><span class="kw">module</span> <span class="dt">Data.Set</span>
+    (
+      <span class="co">-- * The @Set@ type</span>
+      <span class="dt">Set</span>
+    , empty
+    , singleton
+
+      <span class="co">-- * Querying</span>
+    , member
+    ) <span class="kw">where</span></code></pre></div>
+</div>
+<div id="if-then-else-clauses" class="section level5 unnumbered">
+<h5>If-then-else clauses</h5>
+<p>Generally, guards and pattern matches should be preferred over if-then-else clauses, where possible. Short cases should usually be put on a single line (when line length allows it).</p>
+<p>When writing non-monadic code (i.e. when not using <code>do</code>) and guards and pattern matches can’t be used, you can align if-then-else clauses like you would normal expressions:</p>
+<div class="sourceCode"><pre class="sourceCode haskell"><code class="sourceCode haskell">foo <span class="fu">=</span> <span class="kw">if</span> <span class="fu">...</span>
+      <span class="kw">then</span> <span class="fu">...</span>
+      <span class="kw">else</span> <span class="fu">...</span></code></pre></div>
+<p>Otherwise, you should be consistent with the 4-spaces indent rule, and the <code>then</code> and the <code>else</code> keyword should be aligned. Examples:</p>
+<div class="sourceCode"><pre class="sourceCode haskell"><code class="sourceCode haskell">foo <span class="fu">=</span> <span class="kw">do</span>
+    someCode
+    <span class="kw">if</span> condition
+        <span class="kw">then</span> someMoreCode
+        <span class="kw">else</span> someAlternativeCode</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode haskell"><code class="sourceCode haskell">foo <span class="fu">=</span> bar <span class="fu">$</span> \qux <span class="ot">-&gt;</span> <span class="kw">if</span> predicate qux
+    <span class="kw">then</span> doSomethingSilly
+    <span class="kw">else</span> someOtherCode</code></pre></div>
+<p>The same rule applies to nested do blocks:</p>
+<div class="sourceCode"><pre class="sourceCode haskell"><code class="sourceCode haskell">foo <span class="fu">=</span> <span class="kw">do</span>
+    instruction <span class="ot">&lt;-</span> decodeInstruction
+    skip <span class="ot">&lt;-</span> load Memory.skip
+    <span class="kw">if</span> skip <span class="fu">==</span> <span class="bn">0x0000</span>
+        <span class="kw">then</span> <span class="kw">do</span>
+            execute instruction
+            addCycles <span class="fu">$</span> instructionCycles instruction
+        <span class="kw">else</span> <span class="kw">do</span>
+            store Memory.skip <span class="bn">0x0000</span>
+            addCycles <span class="dv">1</span></code></pre></div>
+</div>
+<div id="case-expressions" class="section level5 unnumbered">
+<h5>Case expressions</h5>
+<p>A case expression can be indented using the two following style:</p>
+<div class="sourceCode"><pre class="sourceCode haskell"><code class="sourceCode haskell">foobar <span class="fu">=</span> <span class="kw">case</span> something <span class="kw">of</span>
+    <span class="dt">Just</span> j  <span class="ot">-&gt;</span> foo
+    <span class="dt">Nothing</span> <span class="ot">-&gt;</span> bar</code></pre></div>
+<p>Align the <code>-&gt;</code> arrows when it helps readability.</p>
+</div>
+<div id="imports-1" class="section level4 unnumbered">
+<h4>Imports</h4>
+<p>Imports should be grouped in the following order:</p>
+<ol style="list-style-type: decimal">
+<li>standard library imports</li>
+<li>related third party imports</li>
+<li>local application/library specific imports</li>
+</ol>
+<p>Put a blank line between each group of imports. The imports in each group should be sorted alphabetically, by module name.</p>
+<p>Always use explicit import lists or <code>qualified</code> imports for standard and third party libraries. This makes the code more robust against changes in these libraries. Exception: The Prelude.</p>
+</div>
+<div id="comments" class="section level4 unnumbered">
+<h4>Comments</h4>
+<div id="punctuation" class="section level5 unnumbered">
+<h5>Punctuation</h5>
+<p>Write proper sentences; start with a capital letter and use proper punctuation.</p>
+</div>
+<div id="top-level-definitions" class="section level5 unnumbered">
+<h5>Top-Level Definitions</h5>
+<p>Comment every top level function (particularly exported functions), and provide a type signature; use Haddock syntax in the comments. Comment every exported data type. Function example:</p>
+<div class="sourceCode"><pre class="sourceCode haskell"><code class="sourceCode haskell"><span class="co">-- | Send a message on a socket.  The socket must be in a connected</span>
+<span class="co">-- state.  Returns the number of bytes sent.  Applications are</span>
+<span class="co">-- responsible for ensuring that all data has been sent.</span>
+<span class="ot">send ::</span> <span class="dt">Socket</span>      <span class="co">-- ^ Connected socket</span>
+     <span class="ot">-&gt;</span> <span class="dt">ByteString</span>  <span class="co">-- ^ Data to send</span>
+     <span class="ot">-&gt;</span> <span class="dt">IO</span> <span class="dt">Int</span>      <span class="co">-- ^ Bytes sent</span></code></pre></div>
+<p>For functions the documentation should give enough information to apply the function without looking at the function’s definition.</p>
+<p>Record example:</p>
+<div class="sourceCode"><pre class="sourceCode haskell"><code class="sourceCode haskell"><span class="co">-- | Bla bla bla.</span>
+<span class="kw">data</span> <span class="dt">Person</span> <span class="fu">=</span> <span class="dt">Person</span>
+    {<span class="ot"> age  ::</span> <span class="fu">!</span><span class="dt">Int</span>     <span class="co">-- ^ Age</span>
+    ,<span class="ot"> name ::</span> <span class="fu">!</span><span class="dt">String</span>  <span class="co">-- ^ First name</span>
+    }</code></pre></div>
+<p>For fields that require longer comments format them like so:</p>
+<div class="sourceCode"><pre class="sourceCode haskell"><code class="sourceCode haskell"><span class="kw">data</span> <span class="dt">Record</span> <span class="fu">=</span> <span class="dt">Record</span>
+    { <span class="co">-- | This is a very very very long comment that is split over</span>
+      <span class="co">-- multiple lines.</span>
+<span class="ot">      field1 ::</span> <span class="fu">!</span><span class="dt">Text</span>
+
+      <span class="co">-- | This is a second very very very long comment that is split</span>
+      <span class="co">-- over multiple lines.</span>
+    ,<span class="ot"> field2 ::</span> <span class="fu">!</span><span class="dt">Int</span>
+    }</code></pre></div>
+</div>
+<div id="end-of-line-comments" class="section level5 unnumbered">
+<h5>End-of-Line Comments</h5>
+<p>Separate end-of-line comments from the code using 2 spaces. Align comments for data type definitions. Some examples:</p>
+<div class="sourceCode"><pre class="sourceCode haskell"><code class="sourceCode haskell"><span class="kw">data</span> <span class="dt">Parser</span> <span class="fu">=</span> <span class="dt">Parser</span>
+    <span class="fu">!</span><span class="dt">Int</span>         <span class="co">-- Current position</span>
+    <span class="fu">!</span><span class="dt">ByteString</span>  <span class="co">-- Remaining input</span>
+
+<span class="ot">foo ::</span> <span class="dt">Int</span> <span class="ot">-&gt;</span> <span class="dt">Int</span>
+foo n <span class="fu">=</span> salt <span class="fu">*</span> <span class="dv">32</span> <span class="fu">+</span> <span class="dv">9</span>
+  <span class="kw">where</span>
+    salt <span class="fu">=</span> <span class="dv">453645243</span>  <span class="co">-- Magic hash salt.</span></code></pre></div>
+</div>
+</div>
+<div id="links" class="section level4 unnumbered">
+<h4>Links</h4>
+<p>Use in-line links economically. You are encouraged to add links for API names. It is not necessary to add links for all API names in a Haddock comment. We therefore recommend adding a link to an API name if:</p>
+<ul>
+<li><p>The user might actually want to click on it for more information (in your judgment), and</p></li>
+<li><p>Only for the first occurrence of each API name in the comment (don’t bother repeating a link)</p></li>
+</ul>
+</div>
+<div id="naming" class="section level4 unnumbered">
+<h4>Naming</h4>
+<p>Use camel case (e.g. <code>functionName</code>) when naming functions and upper camel case (e.g. <code>DataType</code>) when naming data types.</p>
+<p>For readability reasons, don’t capitalize all letters when using an abbreviation. For example, write <code>HttpServer</code> instead of <code>HTTPServer</code>. Exception: Two letter abbreviations, e.g. <code>IO</code>.</p>
+<div id="modules" class="section level5 unnumbered">
+<h5>Modules</h5>
+<p>Use singular when naming modules e.g. use <code>Data.Map</code> and <code>Data.ByteString.Internal</code> instead of <code>Data.Maps</code> and <code>Data.ByteString.Internals</code>.</p>
+</div>
+<div id="point-free-style" class="section level5 unnumbered">
+<h5>Point-free style</h5>
+<p>Avoid over-using point-free style. For example, this is hard to read:</p>
+<div class="sourceCode"><pre class="sourceCode haskell"><code class="sourceCode haskell"><span class="co">-- Bad:</span>
+f <span class="fu">=</span> (g <span class="fu">.</span>) <span class="fu">.</span> h</code></pre></div>
+</div>
+</div>
+<div id="warnings" class="section level4 unnumbered">
+<h4>Warnings</h4>
+<p>Code should be compilable with <code>-Wall -Werror</code>. There should be no warnings.</p>
+</div>
+<div id="exception-handling" class="section level4 unnumbered">
+<h4>Exception handling</h4>
+<p>The <a href="https://haskell-lang.org/library/safe-exceptions">safe-exceptions library</a> should be used. The library contains guidance on its use.</p>
+</div>
+</div>
+<div id="java" class="section level2">
+<h2><span class="header-section-number">3.2</span> Java</h2>
+<p><em>TODO</em></p>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="python.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="version-control.html" class="navigation navigation-next " aria-label="Next page""><i class="fa fa-angle-right"></i></a>
+
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script>
+require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": false,
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"download": null,
+"toc": {
+"collapse": "none"
+}
+});
+});
+</script>
+
+</body>
+
+</html>
