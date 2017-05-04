@@ -1,0 +1,8 @@
+* TODO
+- [ ] Write about docker for project/package delivery 
+- [ ] Add training materials section for preferred tools
+- [ ] Project skeletons to be linked to resources
+- [ ] Consider separate repo for project skeletons
+- [ ] Submodule brew-ds
+- [ ] Update brew-ds README with instructions on how to access a terminal
+  

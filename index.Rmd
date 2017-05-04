@@ -9,15 +9,21 @@ documentclass: book
 
 # Preface {-}
 
-```{r logo, echo = FALSE}
-knitr::include_graphics("img/dsc.png")
-```
-
-The purpose of this document is to define correct coding standards and project best practices to be used within the Data Science Campus (DSC) at the Office for National Statistics (ONS).
-
 ```{r knitrPrefs, include = FALSE}
 knitr::opts_chunk$set(
   out.width = "80%",
-  fig.align = "center"
+  fig.align = "center",
+  eval = FALSE
 )
 ```
+
+The purpose of this document is to provide recommendations to help you to structure your projects and write your programs in a way that enables collaboration and ensures consistency for Data Science Campus (DSC, the Campus) work for the Office for National Statistics (ONS). 
+
+When working in a scientific environment, one should always strive to make their work as reproducible as possible. This is no different when working with code and data. There are two essential reasons for this:
+
+* to show evidence of the correctness of your results
+* to enable others to make use of our methods and results
+
+We shall provide guidance only for our preferred tools and approaches. However, the most prevalent guidance to be taken from this document is to *use your common sense*. If your code begins to look a lot like spaghetti and you are thinking "I feel sorry for the poor sap that I hand this over to" then you should go away and make it so that whoever does inherit your code, or play with it or handle it in any way won't get upset just by reading it. Our recommended methods of working are intended to make it simple to write, maintain, share and collaborate. If you find any errors or would like to pass comments regarding this content then please [contact us](mailto:nathan.eastwood@ons.gov.uk).
+
+For additional information, please refer to the [rOpenSci](http://ropensci.github.io/reproducibility-guide/) documentation.
