@@ -6,9 +6,8 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>Data Science Project Coding Standards</title>
-  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
   <meta name="description" content="Data Science Project Coding Standards">
-  <meta name="generator" content="bookdown 0.3 and GitBook 2.6.7">
+  <meta name="generator" content="bookdown 0.3.16 and GitBook 2.6.7">
 
   <meta property="og:title" content="Data Science Project Coding Standards" />
   <meta property="og:type" content="book" />
@@ -33,7 +32,6 @@
   
 <link rel="prev" href="other-languages.html">
 <link rel="next" href="packaging-projects.html">
-
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -87,10 +85,11 @@ code > span.co { color: #0066ff; font-weight: bold; font-style: italic; } /* Com
 code > span.in { color: #0066ff; font-weight: bold; font-style: italic; } /* Information */
 </style>
 
-<link rel="stylesheet" href="rsrc/style/custom.css" type="text/css" />
+<link rel="stylesheet" href="rsrc\style\custom.css" type="text/css" />
 </head>
 
 <body>
+
 
 
   <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
@@ -162,6 +161,12 @@ code > span.in { color: #0066ff; font-weight: bold; font-style: italic; } /* Inf
 <div id="commit-best-practices" class="section level2">
 <h2><span class="header-section-number">4.2</span> Commit best practices</h2>
 <p>Ideally, each commit should be minimal but complete. They should aim to solve a single specific problem with your code. This makes commits that you make much easier to understand but it also makes it easier to undo commits should you make an error. Leaving all changes to be committed at the end of the day is a <em>bad</em> idea as rather than being able to undo a single issue, you may lose an entire day’s work to solve your problem. When you think you have solved a bug, it is always a good idea to include a <a href="#tests">test</a> to confirm you are correct. Each commit message should be concise but present a clear message about what the commit achieved. There should be enough detail so you can remember (and understand) what was done. Ideally you should describe the why but not the what.</p>
+<div class="figure" style="text-align: center"><span id="fig:gitCommit"></span>
+<img src="../rsrc/img/git_commit.png" alt="Try to keep git commit messages as informative as possible" width="80%" />
+<p class="caption">
+Figure 4.1: Try to keep git commit messages as informative as possible
+</p>
+</div>
 <p>Sticking to these standards will make it much easier to work with others. For example, if two people have changed the same file in the same place, it’ll be easier to resolve conflicts if the commits are small and it’s clear why each change was made and project newcomers can more easily understand the history by reading the commit logs. More importantly, if you can figure out exactly when a bug was introduced, you can easily understand what you were doing (and why!). Some really good advice is:</p>
 <blockquote>
 <p>You might think that because no one else will ever look at your repo, that writing good commit messages is not worth the effort. But keep in mind that you have one very important collaborator: future-you! If you spend a little time now polishing your commit messages, future-you will thank you if and when they need to do a post-mortem on a bug. – <a href="http://r-pkgs.had.co.nz/git.html#commit-best-practices">Hadley Wickham</a></p>
@@ -174,8 +179,9 @@ code > span.in { color: #0066ff; font-weight: bold; font-style: italic; } /* Inf
         </div>
       </div>
 <a href="other-languages.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="packaging-projects.html" class="navigation navigation-next " aria-label="Next page""><i class="fa fa-angle-right"></i></a>
-
+<a href="packaging-projects.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/lunr.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
