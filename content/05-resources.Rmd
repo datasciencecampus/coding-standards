@@ -1,14 +1,15 @@
 # Resources
 
-## Setting up your Mac
+## Setting up your Mac or Linux Machines
 
-A script has been prepared for the Campus which will set up MacOS machines with
-the necessary tools to start in data science. Obtain the content of
-the [repository](https://github.com/nathaneastwood/brew-ds) and then follow the
-instructions in README.md to install the packages.
+Data Scientists typically use a common set of tools. A script has been prepared which will set up a MacOS or Linux machine with the following set of common tools: 
 
-You may also wish to join the Data Science
-Campus [github organisation](https://github.com/datasciencecampus) 
+* R, RStudio and the following R packages: `tidyverse`, `rmarkdown`, `shiny`, `mlr` 
+* Python 3 and the following Python packages: `pandas`, `seaborn`, `bokeh`, `numpy`, `scipy`, `statsmodels`, `scikit-learn`, `virtualenv`, `jedi`
+* LaTeX
+* Slack
+
+This script is held within the [`brew-ds`](https://github.com/nathaneastwood/brew-ds) repository on GitHub; instructions can be found in the `README.md`.
 
 
 
