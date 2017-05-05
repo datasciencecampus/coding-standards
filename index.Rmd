@@ -16,7 +16,7 @@ knitr::opts_chunk$set(
 )
 ```
 
-The purpose of this document is to provide recommendations to help you to structure your projects and write your programs in a way that enables collaboration and ensures consistency for Data Science Campus (DSC, the Campus) work for the Office for National Statistics (ONS). 
+The purpose of this document is to provide recommendations to help you to structure your projects and write your programs in a way that enables collaboration and ensures consistency for Government Data Science work. 
 
 When working in a scientific environment, one should always strive to make their work as reproducible as possible. This is no different when working with code and data. There are two essential reasons for this:
 
