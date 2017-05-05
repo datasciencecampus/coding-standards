@@ -218,7 +218,7 @@ Writing tests for our code we can ensure that it works as expected and check whe
 For example, in the code below, we can see that lines 112-115 and 117-120 are not explicitly tested. In this case, we probably don’t need to worry very much, but on other occasions this might prompt us to write more tests.
 
 ```{r codecov, echo = FALSE, eval = TRUE, fig.cap = "Code Coverage"}
-knitr::include_graphics("../rsrc/img/code_coverage.png")
+knitr::include_graphics("rsrc/img/code_coverage.png")
 ```
 
 > Measuring code coverage allows developers to asses their progress in quality checking their own (or their collaborators) code. Measuring code coverage allows code consumers to have confidence in the measures taken by the package authors to verify high code quality. -- [Jim Hester](https://cran.r-project.org/web/packages/covr/vignettes/how_it_works.html#introduction)
