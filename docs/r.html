@@ -6,9 +6,8 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>Data Science Project Coding Standards</title>
-  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
   <meta name="description" content="Data Science Project Coding Standards">
-  <meta name="generator" content="bookdown 0.3 and GitBook 2.6.7">
+  <meta name="generator" content="bookdown 0.3.16 and GitBook 2.6.7">
 
   <meta property="og:title" content="Data Science Project Coding Standards" />
   <meta property="og:type" content="book" />
@@ -33,7 +32,6 @@
   
 <link rel="prev" href="index.html">
 <link rel="next" href="python.html">
-
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -87,10 +85,11 @@ code > span.co { color: #0066ff; font-weight: bold; font-style: italic; } /* Com
 code > span.in { color: #0066ff; font-weight: bold; font-style: italic; } /* Information */
 </style>
 
-<link rel="stylesheet" href="rsrc/style/custom.css" type="text/css" />
+<link rel="stylesheet" href="rsrc\style\custom.css" type="text/css" />
 </head>
 
 <body>
+
 
 
   <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
@@ -196,7 +195,7 @@ stuff.r</code></pre>
 <p>Although standard R uses dots extensively in function names (<code>contrib.url()</code>), methods (<code>all.equal</code>), or class names (<code>data.frame</code>), it’s better to use underscores. For example, the basic S3 scheme to define a method for a class, using a generic function, would be to concatenate them with a dot, like this <code>generic.class</code>. This can lead to confusing methods like <code>as.data.frame.data.frame()</code> whereas something like <code>print.my_class()</code> is unambiguous.</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Good</span>
 day_one
-day_<span class="dv">1</span>
+day_1
 
 <span class="co"># Bad</span>
 first_day_of_the_month
@@ -207,7 +206,7 @@ djm1</code></pre></div>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Bad</span>
 T &lt;-<span class="st"> </span><span class="ot">FALSE</span>
 c &lt;-<span class="st"> </span><span class="dv">10</span>
-mean &lt;-<span class="st"> </span><span class="cf">function</span>(x) <span class="kw">sum</span>(x)</code></pre></div>
+mean &lt;-<span class="st"> </span>function(x) <span class="kw">sum</span>(x)</code></pre></div>
 </div>
 <div id="syntax" class="section level4 unnumbered">
 <h4>Syntax</h4>
@@ -222,27 +221,27 @@ mean &lt;-<span class="st"> </span><span class="cf">function</span>(x) <span cla
 <p>An opening curly brace should never go on its own line and should always be followed by a new line. A closing curly brace should always go on its own line, unless it’s followed by <code>else</code> (or a closing parenthesis).</p>
 <p>Always indent the code inside curly braces. When indenting your code, use two spaces. Never use hard tabs (most editors allow you to replace tabs with a set number of spaces so you can still use the tab key).</p>
 <p>It’s ok to leave very short statements on the same line:</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="cf">if</span> (y <span class="op">&lt;</span><span class="st"> </span><span class="dv">0</span> <span class="op">&amp;&amp;</span><span class="st"> </span>debug) <span class="kw">message</span>(<span class="st">&quot;Y is negative&quot;</span>)</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">if (y &lt;<span class="st"> </span><span class="dv">0</span> &amp;&amp;<span class="st"> </span>debug) <span class="kw">message</span>(<span class="st">&quot;Y is negative&quot;</span>)</code></pre></div>
 <p>but try to avoid having more than two statements on one line</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># BAD</span>
-<span class="cf">if</span> (y <span class="op">&lt;</span><span class="st"> </span><span class="dv">0</span> <span class="op">&amp;&amp;</span><span class="st"> </span>debug) <span class="kw">message</span>(<span class="st">&quot;Y is negative&quot;</span>); x &lt;-<span class="st"> </span><span class="kw">runif</span>(<span class="dv">10</span>); x <span class="op">+</span><span class="st"> </span><span class="dv">10</span></code></pre></div>
+if (y &lt;<span class="st"> </span><span class="dv">0</span> &amp;&amp;<span class="st"> </span>debug) <span class="kw">message</span>(<span class="st">&quot;Y is negative&quot;</span>); x &lt;-<span class="st"> </span><span class="kw">runif</span>(<span class="dv">10</span>); x +<span class="st"> </span><span class="dv">10</span></code></pre></div>
 </div>
 <div id="pipes" class="section level5 unnumbered">
 <h5>Pipes</h5>
 <p>If you use the <code>%&gt;%</code> operator from the tidyverse, put each verb on its own line. This makes it simpler to rearrange them later, and makes it harder to overlook a step. It is ok to keep a one-step pipe in one line.</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Good</span>
-iris <span class="op">%&gt;%</span>
-<span class="st">  </span><span class="kw">group_by</span>(Species) <span class="op">%&gt;%</span>
-<span class="st">  </span><span class="kw">summarize_all</span>(mean) <span class="op">%&gt;%</span>
-<span class="st">  </span>ungroup <span class="op">%&gt;%</span>
-<span class="st">  </span><span class="kw">gather</span>(measure, value, <span class="op">-</span>Species) <span class="op">%&gt;%</span>
+iris %&gt;%
+<span class="st">  </span><span class="kw">group_by</span>(Species) %&gt;%
+<span class="st">  </span><span class="kw">summarize_all</span>(mean) %&gt;%
+<span class="st">  </span>ungroup %&gt;%
+<span class="st">  </span><span class="kw">gather</span>(measure, value, -Species) %&gt;%
 <span class="st">  </span><span class="kw">arrange</span>(value)
 
-iris <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">arrange</span>(Petal.Width)
+iris %&gt;%<span class="st"> </span><span class="kw">arrange</span>(Petal.Width)
 
 <span class="co"># Bad</span>
-iris <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">group_by</span>(Species) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">summarize_all</span>(mean) <span class="op">%&gt;%</span>
-<span class="st">  </span>ungroup <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">gather</span>(measure, value, <span class="op">-</span>Species) <span class="op">%&gt;%</span>
+iris %&gt;%<span class="st"> </span><span class="kw">group_by</span>(Species) %&gt;%<span class="st"> </span><span class="kw">summarize_all</span>(mean) %&gt;%
+<span class="st">  </span>ungroup %&gt;%<span class="st"> </span><span class="kw">gather</span>(measure, value, -Species) %&gt;%
 <span class="st">  </span><span class="kw">arrange</span>(value)</code></pre></div>
 </div>
 <div id="line-length" class="section level5 unnumbered">
@@ -279,7 +278,7 @@ x =<span class="st"> </span><span class="dv">5</span></code></pre></div>
 df &lt;-<span class="st"> </span><span class="kw">read.csv</span>(<span class="st">&#39;foo.csv&#39;</span>)
 
 <span class="co"># Plot data ---------------------------</span>
-<span class="kw">ggplot</span>(df, <span class="kw">aes</span>(<span class="dt">x=</span>foo, <span class="dt">y=</span>bar)) <span class="op">+</span><span class="st"> </span><span class="kw">geom_line</span>()</code></pre></div>
+<span class="kw">ggplot</span>(df, <span class="kw">aes</span>(<span class="dt">x=</span>foo, <span class="dt">y=</span>bar)) +<span class="st"> </span><span class="kw">geom_line</span>()</code></pre></div>
 </div>
 </div>
 <div id="tools" class="section level2">
@@ -310,6 +309,12 @@ df &lt;-<span class="st"> </span><span class="kw">read.csv</span>(<span class="s
 <h2><span class="header-section-number">1.5</span> Code Coverage</h2>
 <p>Writing tests for our code we can ensure that it works as expected and check when changes to that code break pre-existing functionality. But how do we know whether we have tested each possible scenario for our functions? How do we know which lines of code are ran during our tests? This is where code coverage comes in. Code coverage is a measure of the amount of code being exercised by a set of tests. It is an indirect measure of test quality and completeness.</p>
 <p>For example, in the code below, we can see that lines 112-115 and 117-120 are not explicitly tested. In this case, we probably don’t need to worry very much, but on other occasions this might prompt us to write more tests.</p>
+<div class="figure" style="text-align: center"><span id="fig:codecov"></span>
+<img src="../rsrc/img/code_coverage.png" alt="Code Coverage" width="80%" />
+<p class="caption">
+Figure 1.1: Code Coverage
+</p>
+</div>
 <blockquote>
 <p>Measuring code coverage allows developers to asses their progress in quality checking their own (or their collaborators) code. Measuring code coverage allows code consumers to have confidence in the measures taken by the package authors to verify high code quality. – <a href="https://cran.r-project.org/web/packages/covr/vignettes/how_it_works.html#introduction">Jim Hester</a></p>
 </blockquote>
@@ -376,8 +381,9 @@ That results can change so much with different pkg versions is scary (and ignore
         </div>
       </div>
 <a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="python.html" class="navigation navigation-next " aria-label="Next page""><i class="fa fa-angle-right"></i></a>
-
+<a href="python.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/lunr.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
