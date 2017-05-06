@@ -2,27 +2,169 @@
 
 Few software engineering projects will begin without some form of version control and data science should be no different. Version control software allows us to track the three Ws: Who made Which change, and Why? There are various different version control tools such as [Git](https://git-scm.com/), [SVN](https://subversion.apache.org/) and [Mercurial](https://www.mercurial-scm.org/), however within the Data Science Campus we use [`git`](https://git-scm.com/) as our version control software of choice.
 
-Git can be used locally on a single machine, on many networked machines or connected to many online repository services such as [GitHub](https://github.com/), [GitLab](https://about.gitlab.com/) and [BitBucket](https://bitbucket.org/). Each of these services provides hosting for your version control repository, and makes the code open and easy to share with the world, or if necessary, private and shared with the Campus team only. We use GitHub within the Campus and have an [organisation account](https://github.com/datasciencecampus) which allows us to use private repositories, please speak to another member of staff about getting help in joining the organisation.
-
-## Name conventions
-
-All GitHub repository names should follow the `kebab-case` naming convention and be in lower case.
+Git is a distributed version control system. It can be used locally on a single machine, on many networked machines or connected to many online repository services such as [GitHub](https://github.com/), [GitLab](https://about.gitlab.com/) and [BitBucket](https://bitbucket.org/). Each of these services provides hosting for remote clones of your repository, and makes the code open and easy to share with the world, or if necessary, private and shared with the Campus team only. We use GitHub within the Campus and have an [organisation account](https://github.com/datasciencecampus) which allows us to use private repositories, please speak to another member of staff about getting help in joining the organisation.
 
 
-## Commit best practices
-Ideally, each commit should be minimal but complete. They should aim to solve a single specific problem with your code. This makes commits that you make much easier to understand but it also makes it easier to undo commits should you make an error. Leaving all changes to be committed at the end of the day is a *bad* idea as rather than being able to undo a single issue, you may lose an entire day's work to solve your problem. When you think you have solved a bug, it is always a good idea to include a [test](#tests) to confirm you are correct. Each commit message should be concise but present a clear message about what the commit achieved. There should be enough detail so you can remember (and understand) what was done. Ideally you should describe the why but not the what.
+## Style guide
+
+Following a few stylistic guidelines makes it easier for your collaborators to
+understand the history of changes to the repository. Please try to adopt or be
+ready to justify why you chose a different approach.
+
+Sticking to these standards will make it much easier to work with others. For example, if two people have changed the same file in the same place, it’ll be easier to resolve conflicts if the commits are small and it’s clear why each change was made and project newcomers can more easily understand the history by reading the commit logs. More importantly, if you can figure out exactly when a bug was introduced, you can easily understand what you were doing (and why!). Some really good advice is:
+
+> You might think that because no one else will ever look at your repo, that writing good commit messages is not worth the effort. But keep in mind that you have one very important collaborator: future-you! If you spend a little time now polishing your commit messages, future-you will thank you if and when they need to do a post-mortem on a bug. -- [Hadley Wickham](http://r-pkgs.had.co.nz/git.html#commit-best-practices)
+
+### Repository names 
+
+All repository names should follow the `kebab-case` naming convention and be in lower case.
+
+
+### Commit best practices
+
+Ideally, each commit should be minimal but complete. They should aim to solve a single specific problem with your code. This makes commits that you make much easier to understand but it also makes it easier to undo commits should you make an error. 
+
+
+### Commit frequency
+
+You should commit very often. 
+
+Leaving all changes to be committed at the end of the day is a *bad* idea as rather than being able to undo a single issue, you may lose an entire day's work to solve your problem. When you think you have solved a bug, it is always a good idea to include a [test](#tests) to confirm you are correct. 
+
 
 ```{r gitCommit, echo = FALSE, fig.cap = "Try to keep git commit messages as informative as possible"}
 knitr::include_graphics("img/git_commit.png")
 ```
 
-Sticking to these standards will make it much easier to work with others. For example, if two people have changed the same file in the same place, it’ll be easier to resolve conflicts if the commits are small and it’s clear why each change was made and project newcomers can more easily understand the history by reading the commit logs. More importantly, if you can figure out exactly when a bug was introduced, you can easily understand what you were doing (and why!). Some really good advice is:
+It's always easier to _squash_ two commits that have a similar purpose than to split one commit in two.
 
-> You might think that because no one else will ever look at your repo, that writing good commit messages is not worth the effort. But keep in mind that you have one very important collaborator: future-you! If you spend a little time now polishing your commit messages, future-you will thank you if and when they need to do a post-mortem on a bug. -- [Hadley Wickham](http://r-pkgs.had.co.nz/git.html#commit-best-practices)
+Make use of `git rebase --interactive`, remember this allows you to, among
+other things, rewrite the message if you didn't have the time initially, change
+the order in which commits are applied and squash commits that don't
+necessarily need to be separate. 
+
+
+### Commit message
+
+A good commit message briefly summarises the _what_ for scanning purposes, but
+the important part is that it includes the _why_ you've introduced the change.
+If the _what_ in the message isn't enough, the `diff` is there as a fallback, however, this isn't true for the _why_.
+
+Each commit message consists of a **header**, a **body** and a **footer**.
+The header has a special format that includes a **type** and a **subject**:
+
+```
+<type>: <subject>
+<BLANK LINE>
+<body>
+<BLANK LINE>
+<footer>
+```
+
+The first line: _type_ and _subject_ are mandatory, whereas _body_ and _footer_
+are optional. Note that the _BLANK LINES_ are mandatory if _body_ or _footer_
+are present.
+
+Any line of the commit message cannot be longer than 80 characters! This allows the
+message to be easier
+to read on github as well as in various git tools.
+
+#### type
+
+Must be one of the following:
+
+* **feat**: A new feature
+* **fix**: A bug fix
+* **doc**: Documentation only changes
+* **style**: Changes that do not affect the meaning of the code (white-space,
+formatting, missing semi-colons, etc)
+* **refactor**: A code change that neither fixes a bug or adds a feature
+* **perf**: A code change that improves performance
+* **test**: Adding missing tests
+* **chore**: Changes to the build process or auxiliary tools and libraries such as documentation generation
+
+Do not capitalise the first letter.
+
+#### subject
+
+The subject contains succinct description of the change:
+
+* use the imperative, present tense: "Change" not "Changed" nor "Changes"
+* do capitalise first letter
+* no dot (.) at the end
+
+#### body
+
+Just as in the **subject**, use the imperative, present tense: "change" not
+"changed" nor "changes"
+
+The body should include the motivation for the change and contrast this with
+previous behavior.
+
+#### footer
+
+The footer should contain any information about **Breaking Changes** and is
+also the place to
+reference GitHub issues that this commit **Closes**.
+
+**Breaking Changes** are detected as such if the footer contains a line
+starting with BREAKING CHANGE:
+(with optional newlines) The rest of the commit message is then used for this.
+
+This commit message structure is mostly taken from:
+https://github.com/angular/angular.js/blob/master/CONTRIBUTING.md#commit
+
+
+### Tag names
+
+We will follow the [SemVer](http://semver.org) versioning convention:
+
+> Given a version number MAJOR.MINOR.PATCH, increment the:
+>
+>    MAJOR version when you make incompatible API changes,
+>    MINOR version when you add functionality in a backwards-compatible
+>        manner, and
+>    PATCH version when you make backwards-compatible bug fixes.
+>
+>    Additional labels for pre-release and build metadata are available
+>    as extensions to the MAJOR.MINOR.PATCH format.
+
+
+### Branch size
+
+Branches (other than master and development) must be short and as much as possible they should have a single purpose.
+
+
+### Branch names
+
+The name of the branch should refer to its purpose. Do not include your name on
+the branch name (that's already recored by Git).
+
+All branch names should follow the `kebab-case` naming convention and be all in
+lower case.
+
+
+### Destructive actions
+
+Keep any destructive actions local. The most common destructive actions are:
+_merge_ and _rebase_.
+
+
+### Workflow practices
+
+Before merging your feature branch to a public branch (e.g. _master_) always `rebase` your code to the latest version of the public branch and solve the conflicts locally.
+
+`merge` must be `--no-fastforward` as this with the previous guideline improve readability.
+
+Remove the remote feature branch after merging (e.g. `git push origin :feature`).
+
+
+
+
 
 
 # Packaging projects
 
 *TODO {-}*
 
-We say use docker. Its pretty good. 
+We say use docker. Its pretty good.
