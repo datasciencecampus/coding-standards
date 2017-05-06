@@ -5,15 +5,16 @@ Few software engineering projects will begin without some form of version contro
 Git is a distributed version control system. It can be used locally on a single machine, on many networked machines or connected to many online repository services such as [GitHub](https://github.com/), [GitLab](https://about.gitlab.com/) and [BitBucket](https://bitbucket.org/). Each of these services provides hosting for remote clones of your repository, and makes the code open and easy to share with the world, or if necessary, private and shared with the Campus team only. We use GitHub within the Campus and have an [organisation account](https://github.com/datasciencecampus) which allows us to use private repositories, please speak to another member of staff about getting help in joining the organisation.
 
 
-## Style guide
+## Git style guide
 
 Following a few stylistic guidelines makes it easier for your collaborators to
-understand the history of changes to the repository. Please try to adopt or be
+understand the history of changes to the repository. Please try to adopt them or be
 ready to justify why you chose a different approach.
 
 Sticking to these standards will make it much easier to work with others. For example, if two people have changed the same file in the same place, it’ll be easier to resolve conflicts if the commits are small and it’s clear why each change was made and project newcomers can more easily understand the history by reading the commit logs. More importantly, if you can figure out exactly when a bug was introduced, you can easily understand what you were doing (and why!). Some really good advice is:
 
 > You might think that because no one else will ever look at your repo, that writing good commit messages is not worth the effort. But keep in mind that you have one very important collaborator: future-you! If you spend a little time now polishing your commit messages, future-you will thank you if and when they need to do a post-mortem on a bug. -- [Hadley Wickham](http://r-pkgs.had.co.nz/git.html#commit-best-practices)
+
 
 ### Repository names 
 
@@ -111,7 +112,7 @@ reference GitHub issues that this commit **Closes**.
 starting with BREAKING CHANGE:
 (with optional newlines) The rest of the commit message is then used for this.
 
-This commit message structure is mostly taken from:
+This commit message structure was mostly taken from:
 https://github.com/angular/angular.js/blob/master/CONTRIBUTING.md#commit
 
 
@@ -144,12 +145,6 @@ All branch names should follow the `kebab-case` naming convention and be all in
 lower case.
 
 
-### Destructive actions
-
-Keep any destructive actions local. The most common destructive actions are:
-_merge_ and _rebase_.
-
-
 ### Workflow practices
 
 Before merging your feature branch to a public branch (e.g. _master_) always `rebase` your code to the latest version of the public branch and solve the conflicts locally.
@@ -158,10 +153,27 @@ Before merging your feature branch to a public branch (e.g. _master_) always `re
 
 Remove the remote feature branch after merging (e.g. `git push origin :feature`).
 
+Keep any destructive actions local. The most common destructive actions are:
+_merge_ and _rebase_.
 
 
+## References
 
+https://github.com/alphagov/styleguides/blob/master/git.md
 
+https://github.com/conventional-changelog/conventional-changelog/blob/a5505865ff3dd710cf757f50530e73ef0ca641da/conventions/angular.md
+
+https://robots.thoughtbot.com/5-useful-tips-for-a-better-commit-message
+
+https://github.com/torvalds/linux/pull/17#issuecomment-5659933
+
+http://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html
+
+http://semver.org
+
+https://git-scm.com/book/ch5-2.html
+
+https://dev.to/rpalo/plan-your-commits
 
 # Packaging projects
 
