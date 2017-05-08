@@ -139,8 +139,17 @@ Branches (other than master and development) must be short and as much as possib
 
 ### Branch names
 
-The name of the branch should refer to its purpose. Do not include your name on
-the branch name (that's already recored by Git).
+The name of the branch should refer to its purpose.
+
+Specify one of the following types:
+
+  - feat
+  - fix
+  - ... (to be expanded)
+
+If the branch refers to an issue mention the issue number on the name.
+
+Do not include your name on the branch name (that's already recored by Git).
 
 All branch names should follow the `kebab-case` naming convention and be all in
 lower case.
