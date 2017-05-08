@@ -37,13 +37,11 @@ Leaving all changes to be committed at the end of the day is a *bad* idea as rat
 knitr::include_graphics("rsrc/img/git_commit.png")
 ```
 
-It's always easier to _squash_ two commits that have a similar purpose than to split one commit in two.
+When you want to merge your branch to a public one, it's a good practice to review your commit messages and _reword_ those that are not clear enough, re-order those that need more clarity and _squash_ those commits that should be one. 
 
-Make use of `git rebase --interactive`, remember this allows you to, among
-other things, rewrite the message if you didn't have the time initially, change
-the order in which commits are applied and squash commits that don't
-necessarily need to be separate. 
-
+Make use of `git rebase --interactive`, remember
+[it](https://git-scm.com/book/en/v2/Git-Tools-Rewriting-History) allows you to, among
+other things, reword, re-order and squash commits.
 
 ### Commit message
 
