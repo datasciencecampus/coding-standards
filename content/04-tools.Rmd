@@ -128,6 +128,9 @@ We will follow the [SemVer](http://semver.org) versioning convention:
 >    Additional labels for pre-release and build metadata are available
 >    as extensions to the MAJOR.MINOR.PATCH format.
 
+//// Maybe substitute by Hadley's recommendation?
+
+http://r-pkgs.had.co.nz/release.html#release-version
 
 ### Branch size
 
