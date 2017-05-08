@@ -204,7 +204,7 @@ Documenting our code is an essential part of what we do. We should document our 
 
 ## Testing {#tests-r}
 
-In [functional programming](https://en.wikipedia.org/wiki/Functional_programming), code is designed to be reused again and again with different inputs, making for simpler code that is easier to understand and audit. Writing functions allows us to more easily [document](#docs) our code meaning that others can use it without too much hassle. It also means that we can build tests to ensure the code continues to work as expected when we make changes to it.
+In [functional programming](https://en.wikipedia.org/wiki/Functional_programming), code is designed to be reused again and again with different inputs, making for simpler code that is easier to understand and audit. Writing functions allows us to more easily [document](#docs-r) our code meaning that others can use it without too much hassle. It also means that we can build tests to ensure the code continues to work as expected when we make changes to it.
 
 Everytime you write a new function, you should strive to write tests for that function. In fact, some people use a [test driven development](https://en.wikipedia.org/wiki/Test-driven_development) approach whereby tests are written first and a function is written second to pass those tests. In the case a bug is discovered with a function, a test should _always_ be written to ensure that bug is not reintroduced at some point in the future - you are essentially protecting yourself from future you's mistakes.
 
@@ -223,13 +223,9 @@ knitr::include_graphics("rsrc/img/code_coverage.png")
 
 > Measuring code coverage allows developers to asses their progress in quality checking their own (or their collaborators) code. Measuring code coverage allows code consumers to have confidence in the measures taken by the package authors to verify high code quality. -- [Jim Hester](https://cran.r-project.org/web/packages/covr/vignettes/how_it_works.html#introduction)
 
-#### Coverage Services {-}
+#### Coverage Services
 
-* [Codecov](http://codecov.io)
-* [Coveralls](http://coveralls.io)
-
-In R we can obtain this functionality by
-using [`covr`](https://github.com/jimhester/covr). This allows the user to track and report code coverage for your package and (optionally) upload the results to a [coverage service](#codecov) like Codecov or Coveralls. `covr` works with both `RUnit` and `testthat`, though we are [using `testthat` for our tests](#tests). `covr` provides three functions to calculate test coverage:
+In R we can obtain this functionality by using [`covr`](https://github.com/jimhester/covr). This allows the user to track and report code coverage for your package and (optionally) upload the results to a [coverage service](#coverage-r) like [Codecov](http://codecov.io) or [Coveralls](http://coveralls.io). `covr` works with both `RUnit` and `testthat`, though we are [using `testthat` for our tests](#tests-r). `covr` provides three functions to calculate test coverage:
 
 - `package_coverage()` performs coverage calculation on an R package (unit tests must be contained in the "tests" directory) 
 - `file_coverage()` performs coverage calculation on one or more R scripts by executing one or more R scripts.
