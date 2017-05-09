@@ -268,7 +268,7 @@ Figure 4.1: Try to keep git commit messages as informative as possible
 <div id="workflow-practices" class="section level3">
 <h3><span class="header-section-number">4.1.8</span> Workflow practices</h3>
 <p>Before merging your feature branch to a public branch (e.g. <em>master</em>) always <code>rebase</code> your code to the latest version of the public branch and solve the conflicts locally.</p>
-<p><code>merge</code> must be <code>--no-fastforward</code> as this with the previous guideline improve readability.</p>
+<p><code>merge</code> must be <code>--no-ff</code> as this with the previous guideline improve readability.</p>
 <p>Remove the remote feature branch after merging (e.g. <code>git push origin :feature</code>).</p>
 <p>Keep any destructive actions local. The most common destructive actions are: <em>merge</em> and <em>rebase</em>.</p>
 </div>
