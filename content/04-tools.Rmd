@@ -32,7 +32,6 @@ You should commit very often.
 
 Leaving all changes to be committed at the end of the day is a *bad* idea as rather than being able to undo a single issue, you may lose an entire day's work to solve your problem. When you think you have solved a bug, it is always a good idea to include a [test](#tests) to confirm you are correct. 
 
-
 ```{r gitCommit, echo = FALSE, eval = TRUE, fig.cap = "Try to keep git commit messages as informative as possible"}
 knitr::include_graphics("rsrc/img/git_commit.png")
 ```

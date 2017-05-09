@@ -85,7 +85,7 @@ code > span.co { color: #0066ff; font-weight: bold; font-style: italic; } /* Com
 code > span.in { color: #0066ff; font-weight: bold; font-style: italic; } /* Information */
 </style>
 
-<link rel="stylesheet" href="rsrc\style\custom.css" type="text/css" />
+<link rel="stylesheet" href="rsrc/style/custom.css" type="text/css" />
 </head>
 
 <body>
@@ -156,7 +156,7 @@ code > span.in { color: #0066ff; font-weight: bold; font-style: italic; } /* Inf
 <div id="style" class="section level2">
 <h2><span class="header-section-number">1.1</span> Programming Styles</h2>
 <p><em>Make pretty code</em>.</p>
-<p><a href="http://r-pkgs.had.co.nz/style.html">Hadley Wickham’s R Style Guide</a> should form the basis for all generated R code, this itself is based on Google’s <a href="http://google-styleguide.googlecode.com/svn/trunk/google-r-style.html">R Style Guide</a>. Some important points to note are to try to stick to 80 characters per line (exceptions are made for <code>.Rmd</code> files or similar) and to use 2 spaces, not tabs, for indentation. With regards to naming conventions, some people prefer <code>snake_case</code> where as others prefer <code>camelCase</code>; generally speaking either are fine so long as you and any collaborators are consistent with your code.</p>
+<p><a href="http://r-pkgs.had.co.nz/style.html">Hadley Wickham’s R Style Guide</a> should form the basis for all generated R code, this itself is based on Google’s <a href="https://google.github.io/styleguide/Rguide.xml">R Style Guide</a>. Some important points to note are to try to stick to 80 characters per line (exceptions are made for <code>.Rmd</code> files or similar) and to use 2 spaces, not tabs, for indentation. With regards to naming conventions, some people prefer <code>snake_case</code> where as others prefer <code>camelCase</code>; generally speaking either are fine so long as you and any collaborators are consistent with your code.</p>
 <p>Some quick notes on what <em>not</em> to do when programming in R:</p>
 <ul>
 <li>Do not use <code>attach()</code></li>
@@ -195,7 +195,7 @@ stuff.r</code></pre>
 <p>Although standard R uses dots extensively in function names (<code>contrib.url()</code>), methods (<code>all.equal</code>), or class names (<code>data.frame</code>), it’s better to use underscores. For example, the basic S3 scheme to define a method for a class, using a generic function, would be to concatenate them with a dot, like this <code>generic.class</code>. This can lead to confusing methods like <code>as.data.frame.data.frame()</code> whereas something like <code>print.my_class()</code> is unambiguous.</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Good</span>
 day_one
-day_1
+day_<span class="dv">1</span>
 
 <span class="co"># Bad</span>
 first_day_of_the_month
@@ -206,7 +206,7 @@ djm1</code></pre></div>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Bad</span>
 T &lt;-<span class="st"> </span><span class="ot">FALSE</span>
 c &lt;-<span class="st"> </span><span class="dv">10</span>
-mean &lt;-<span class="st"> </span>function(x) <span class="kw">sum</span>(x)</code></pre></div>
+mean &lt;-<span class="st"> </span><span class="cf">function</span>(x) <span class="kw">sum</span>(x)</code></pre></div>
 </div>
 <div id="syntax" class="section level4 unnumbered">
 <h4>Syntax</h4>
@@ -221,27 +221,27 @@ mean &lt;-<span class="st"> </span>function(x) <span class="kw">sum</span>(x)</c
 <p>An opening curly brace should never go on its own line and should always be followed by a new line. A closing curly brace should always go on its own line, unless it’s followed by <code>else</code> (or a closing parenthesis).</p>
 <p>Always indent the code inside curly braces. When indenting your code, use two spaces. Never use hard tabs (most editors allow you to replace tabs with a set number of spaces so you can still use the tab key).</p>
 <p>It’s ok to leave very short statements on the same line:</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">if (y &lt;<span class="st"> </span><span class="dv">0</span> &amp;&amp;<span class="st"> </span>debug) <span class="kw">message</span>(<span class="st">&quot;Y is negative&quot;</span>)</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="cf">if</span> (y <span class="op">&lt;</span><span class="st"> </span><span class="dv">0</span> <span class="op">&amp;&amp;</span><span class="st"> </span>debug) <span class="kw">message</span>(<span class="st">&quot;Y is negative&quot;</span>)</code></pre></div>
 <p>but try to avoid having more than two statements on one line</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># BAD</span>
-if (y &lt;<span class="st"> </span><span class="dv">0</span> &amp;&amp;<span class="st"> </span>debug) <span class="kw">message</span>(<span class="st">&quot;Y is negative&quot;</span>); x &lt;-<span class="st"> </span><span class="kw">runif</span>(<span class="dv">10</span>); x +<span class="st"> </span><span class="dv">10</span></code></pre></div>
+<span class="cf">if</span> (y <span class="op">&lt;</span><span class="st"> </span><span class="dv">0</span> <span class="op">&amp;&amp;</span><span class="st"> </span>debug) <span class="kw">message</span>(<span class="st">&quot;Y is negative&quot;</span>); x &lt;-<span class="st"> </span><span class="kw">runif</span>(<span class="dv">10</span>); x <span class="op">+</span><span class="st"> </span><span class="dv">10</span></code></pre></div>
 </div>
 <div id="pipes" class="section level5 unnumbered">
 <h5>Pipes</h5>
 <p>If you use the <code>%&gt;%</code> operator from the tidyverse, put each verb on its own line. This makes it simpler to rearrange them later, and makes it harder to overlook a step. It is ok to keep a one-step pipe in one line.</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Good</span>
-iris %&gt;%
-<span class="st">  </span><span class="kw">group_by</span>(Species) %&gt;%
-<span class="st">  </span><span class="kw">summarize_all</span>(mean) %&gt;%
-<span class="st">  </span>ungroup %&gt;%
-<span class="st">  </span><span class="kw">gather</span>(measure, value, -Species) %&gt;%
+iris <span class="op">%&gt;%</span>
+<span class="st">  </span><span class="kw">group_by</span>(Species) <span class="op">%&gt;%</span>
+<span class="st">  </span><span class="kw">summarize_all</span>(mean) <span class="op">%&gt;%</span>
+<span class="st">  </span>ungroup <span class="op">%&gt;%</span>
+<span class="st">  </span><span class="kw">gather</span>(measure, value, <span class="op">-</span>Species) <span class="op">%&gt;%</span>
 <span class="st">  </span><span class="kw">arrange</span>(value)
 
-iris %&gt;%<span class="st"> </span><span class="kw">arrange</span>(Petal.Width)
+iris <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">arrange</span>(Petal.Width)
 
 <span class="co"># Bad</span>
-iris %&gt;%<span class="st"> </span><span class="kw">group_by</span>(Species) %&gt;%<span class="st"> </span><span class="kw">summarize_all</span>(mean) %&gt;%
-<span class="st">  </span>ungroup %&gt;%<span class="st"> </span><span class="kw">gather</span>(measure, value, -Species) %&gt;%
+iris <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">group_by</span>(Species) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">summarize_all</span>(mean) <span class="op">%&gt;%</span>
+<span class="st">  </span>ungroup <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">gather</span>(measure, value, <span class="op">-</span>Species) <span class="op">%&gt;%</span>
 <span class="st">  </span><span class="kw">arrange</span>(value)</code></pre></div>
 </div>
 <div id="line-length" class="section level5 unnumbered">
@@ -278,7 +278,7 @@ x =<span class="st"> </span><span class="dv">5</span></code></pre></div>
 df &lt;-<span class="st"> </span><span class="kw">read.csv</span>(<span class="st">&#39;foo.csv&#39;</span>)
 
 <span class="co"># Plot data ---------------------------</span>
-<span class="kw">ggplot</span>(df, <span class="kw">aes</span>(<span class="dt">x=</span>foo, <span class="dt">y=</span>bar)) +<span class="st"> </span><span class="kw">geom_line</span>()</code></pre></div>
+<span class="kw">ggplot</span>(df, <span class="kw">aes</span>(<span class="dt">x=</span>foo, <span class="dt">y=</span>bar)) <span class="op">+</span><span class="st"> </span><span class="kw">geom_line</span>()</code></pre></div>
 </div>
 </div>
 <div id="tools" class="section level2">
@@ -301,7 +301,7 @@ df &lt;-<span class="st"> </span><span class="kw">read.csv</span>(<span class="s
 </div>
 <div id="tests-r" class="section level2">
 <h2><span class="header-section-number">1.4</span> Testing</h2>
-<p>In <a href="https://en.wikipedia.org/wiki/Functional_programming">functional programming</a>, code is designed to be reused again and again with different inputs, making for simpler code that is easier to understand and audit. Writing functions allows us to more easily <a href="#docs">document</a> our code meaning that others can use it without too much hassle. It also means that we can build tests to ensure the code continues to work as expected when we make changes to it.</p>
+<p>In <a href="https://en.wikipedia.org/wiki/Functional_programming">functional programming</a>, code is designed to be reused again and again with different inputs, making for simpler code that is easier to understand and audit. Writing functions allows us to more easily <a href="r.html#docs-r">document</a> our code meaning that others can use it without too much hassle. It also means that we can build tests to ensure the code continues to work as expected when we make changes to it.</p>
 <p>Everytime you write a new function, you should strive to write tests for that function. In fact, some people use a <a href="https://en.wikipedia.org/wiki/Test-driven_development">test driven development</a> approach whereby tests are written first and a function is written second to pass those tests. In the case a bug is discovered with a function, a test should <em>always</em> be written to ensure that bug is not reintroduced at some point in the future - you are essentially protecting yourself from future you’s mistakes.</p>
 <p>There are different packages that help with writing and running tests in R such as <a href="https://cran.r-project.org/web/packages/RUnit/index.html"><code>RUnit</code></a> and <a href="https://github.com/hadley/testthat"><code>testthat</code></a>. It is the latter that is generally recommended. More information about <code>testthat</code> can be found in the <a href="http://r-pkgs.had.co.nz/tests.html">R packages</a> book.</p>
 </div>
@@ -318,13 +318,9 @@ Figure 1.1: Code Coverage
 <blockquote>
 <p>Measuring code coverage allows developers to asses their progress in quality checking their own (or their collaborators) code. Measuring code coverage allows code consumers to have confidence in the measures taken by the package authors to verify high code quality. – <a href="https://cran.r-project.org/web/packages/covr/vignettes/how_it_works.html#introduction">Jim Hester</a></p>
 </blockquote>
-<div id="coverage-services" class="section level4 unnumbered">
-<h4>Coverage Services</h4>
-<ul>
-<li><a href="http://codecov.io">Codecov</a></li>
-<li><a href="http://coveralls.io">Coveralls</a></li>
-</ul>
-<p>In R we can obtain this functionality by using <a href="https://github.com/jimhester/covr"><code>covr</code></a>. This allows the user to track and report code coverage for your package and (optionally) upload the results to a <a href="#codecov">coverage service</a> like Codecov or Coveralls. <code>covr</code> works with both <code>RUnit</code> and <code>testthat</code>, though we are <a href="#tests">using <code>testthat</code> for our tests</a>. <code>covr</code> provides three functions to calculate test coverage:</p>
+<div id="coverage-services" class="section level4">
+<h4><span class="header-section-number">1.5.0.1</span> Coverage Services</h4>
+<p>In R we can obtain this functionality by using <a href="https://github.com/jimhester/covr"><code>covr</code></a>. This allows the user to track and report code coverage for your package and (optionally) upload the results to a <a href="r.html#coverage-r">coverage service</a> like <a href="http://codecov.io">Codecov</a> or <a href="http://coveralls.io">Coveralls</a>. <code>covr</code> works with both <code>RUnit</code> and <code>testthat</code>, though we are <a href="r.html#tests-r">using <code>testthat</code> for our tests</a>. <code>covr</code> provides three functions to calculate test coverage:</p>
 <ul>
 <li><code>package_coverage()</code> performs coverage calculation on an R package (unit tests must be contained in the “tests” directory)</li>
 <li><code>file_coverage()</code> performs coverage calculation on one or more R scripts by executing one or more R scripts.</li>
