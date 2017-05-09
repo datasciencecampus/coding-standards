@@ -153,7 +153,7 @@ lower case.
 
 Before merging your feature branch to a public branch (e.g. _master_) always `rebase` your code to the latest version of the public branch and solve the conflicts locally.
 
-`merge` must be `--no-fastforward` as this with the previous guideline improve readability.
+`merge` must be `--no-ff` as this with the previous guideline improve readability.
 
 Remove the remote feature branch after merging (e.g. `git push origin :feature`).
 
