@@ -30,7 +30,7 @@ Ideally, each commit should be minimal but complete. They should aim to solve a 
 
 You should commit very often. 
 
-Leaving all changes to be committed at the end of the day is a *bad* idea as rather than being able to undo a single issue, you may lose an entire day's work to solve your problem. When you think you have solved a bug, it is always a good idea to include a [test](#tests) to confirm you are correct. 
+Leaving all changes to be committed at the end of the day is a *bad* idea as rather than being able to undo a single issue, you may lose an entire day's work to solve your problem. When you think you have solved a bug, it is always a good idea to include a [test](#tests-r) to confirm you are correct. 
 
 ```{r gitCommit, echo = FALSE, eval = TRUE, fig.cap = "Try to keep git commit messages as informative as possible"}
 knitr::include_graphics("rsrc/img/git_commit.png")
@@ -67,7 +67,7 @@ Any line of the commit message cannot be longer than 80 characters! This allows 
 message to be easier
 to read on github as well as in various git tools.
 
-#### type
+#### `type`
 
 Must be one of the following:
 
@@ -83,7 +83,7 @@ formatting, missing semi-colons, etc)
 
 Do not capitalise the first letter.
 
-#### subject
+#### `subject`
 
 The subject contains succinct description of the change:
 
@@ -91,7 +91,7 @@ The subject contains succinct description of the change:
 * do capitalise first letter
 * no dot (.) at the end
 
-#### body
+#### `body`
 
 Just as in the **subject**, use the imperative, present tense: "change" not
 "changed" nor "changes"
@@ -99,7 +99,7 @@ Just as in the **subject**, use the imperative, present tense: "change" not
 The body should include the motivation for the change and contrast this with
 previous behavior.
 
-#### footer
+#### `footer`
 
 The footer should contain any information about **Breaking Changes** and is
 also the place to
@@ -109,8 +109,7 @@ reference GitHub issues that this commit **Closes**.
 starting with BREAKING CHANGE:
 (with optional newlines) The rest of the commit message is then used for this.
 
-This commit message structure was mostly taken from:
-https://github.com/angular/angular.js/blob/master/CONTRIBUTING.md#commit
+This commit message structure was mostly taken from [here](https://github.com/angular/angular.js/blob/master/CONTRIBUTING.md#commit).
 
 
 ### Tag names
@@ -127,10 +126,6 @@ We will follow the [SemVer](http://semver.org) versioning convention:
 >    Additional labels for pre-release and build metadata are available
 >    as extensions to the MAJOR.MINOR.PATCH format.
 
-//// Maybe substitute by Hadley's recommendation?
-
-http://r-pkgs.had.co.nz/release.html#release-version
-
 ### Branch size
 
 Branches (other than master and development) must be short and as much as possible they should have a single purpose.
@@ -146,7 +141,7 @@ Specify one of the following types:
   - fix
   - ... (to be expanded)
 
-If the branch refers to an issue mention the issue number on the name.
+This should then be followed by either a clear reason for the branch or, if the branch refers to an issue, mention the issue number on the name, e.g. `bug-52`.
 
 Do not include your name on the branch name (that's already recored by Git).
 
