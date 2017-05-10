@@ -184,3 +184,7 @@ https://dev.to/rpalo/plan-your-commits
 *TODO {-}*
 
 We say use docker. Its pretty good.
+
+# Travis
+
+*TODO {-}*
