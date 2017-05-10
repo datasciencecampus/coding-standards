@@ -188,3 +188,5 @@ We say use docker. Its pretty good.
 # Travis
 
 *TODO {-}*
+
+* Should also include other CI services*
