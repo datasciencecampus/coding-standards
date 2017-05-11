@@ -189,4 +189,4 @@ We say use docker. Its pretty good.
 
 *TODO {-}*
 
-* Should also include other CI services*
+* Should also include other CI services such as Jenkins*

@@ -7,7 +7,7 @@ setup_git() {
 
 commit_website_files() {
   git add docs
-  git commit -m "chore: Travis build $TRAVIS_BUILD_NUMBER"
+  git commit -m "chore: Travis build $TRAVIS_BUILD_NUMBER [ci-skip]"
 }
 
 upload_files() {
