@@ -185,8 +185,8 @@ https://dev.to/rpalo/plan-your-commits
 
 We say use docker. Its pretty good.
 
-# Travis
+# Continuous Integration
 
 *TODO {-}*
 
-* Should also include other CI services such as Jenkins*
+* Travis, Jenkins, etc.*

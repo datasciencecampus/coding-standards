@@ -1,0 +1,3 @@
+# Licensing
+
+When writing and sharing any code online, you should always include a `LICENSE` file with your code repository. Government have special rules for different types of repositories which you should adhere to. For content and data, you should use the Open Government License ([OGL](http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/)); for code, feel free to use the [MIT](https://opensource.org/licenses/MIT) license.
