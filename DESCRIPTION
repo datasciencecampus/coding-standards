@@ -1,0 +1,20 @@
+Package: codingstandards
+Type: Package
+Title: Coding Standards For Data Science Across Government
+Version: 0.0.1
+Authors@R: c(
+    person("Nathan", "Eastwood", , "nathan.eastwood@ons.gov.uk",
+           role = c("aut", "cre")),
+    person("Gareth", "Clews", , "gareth.clews@ons.gov.uk",
+           role = "aut")
+    )
+Description: A book detailing coding standards to be used for data science 
+    projects within Government.
+License: OGL
+URL: https://datasciencecampus.github.io/coding-standards/
+BugReports: https://github.com/datasciencecampus/coding-standards/issues
+Depends:
+    R (>= 3.3.2)
+Imports:
+    bookdown
+Encoding: UTF-8
