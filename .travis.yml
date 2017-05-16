@@ -11,7 +11,7 @@ before_script:
 before_install:
   - rvm get stable --auto-dotfiles
   - rvm install 2.3.3
-  - gem install htmlproofer
+  - gem install html-proofer
 
 script:
   - ./scripts/cibuild
