@@ -6,7 +6,7 @@ For Haskell we recommend Johan
 Tibell's
 [style guide](https://github.com/tibbe/haskell-style-guide/blob/master/haskell-style.md). This style guide is similar to the designs we choose for implementing python code and is a good fit for projects.
 
-Projects are managed using `cabal` as the main preference. However, `stack` is also suitable. So long as the project can be passed on and compiles then whichever tool you use to sandbox your work is fine.
+Projects are managed using [`stack`](https://github.com/commercialhaskell/stack/blob/master/doc/GUIDE.md). However, `cabal` is also suitable. So long as the project can be passed on and compiles then whichever tool you use to sandbox your work is fine.
 
 It is recommended that you keep your GHC up to date and document which version your program is to be compiled with.
 
@@ -17,7 +17,7 @@ Key points from the above style guide are included below.
 
 Maximum line length is *80 characters*.
 
-##### Indentation {-} 
+##### Indentation {-}
 
 Tabs are illegal.  Use spaces for indenting. Indent your code blocks with *4 spaces*. Indent the `where` keyword two spaces to set it apart from the rest of the code and indent the definitions in a `where` clause 2 spaces.
 
@@ -225,7 +225,7 @@ Code should be compilable with `-Wall -Werror`.  There should be no warnings.
 
 #### Exception handling {-}
 
-The [safe-exceptions library](https://haskell-lang.org/library/safe-exceptions) should be used. The library contains guidance on its use. 
+The [safe-exceptions library](https://haskell-lang.org/library/safe-exceptions) should be used. The library contains guidance on its use.
 
 
 ## Java
