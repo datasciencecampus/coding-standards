@@ -1,15 +1,15 @@
 # Resources
 
-## Setting up your Mac or Linux Machines
+## Setting up your computer
 
-Data Scientists typically use a common set of tools. A script has been prepared which will set up a MacOS or Linux machine with the following set of common tools: 
+Data Scientists typically use a common set of tools. We have listed a few below to get you started.
 
 * R, RStudio and the following R packages: `tidyverse`, `rmarkdown`, `shiny`, `mlr` 
 * Python 3 and the following Python packages: `pandas`, `seaborn`, `bokeh`, `numpy`, `scipy`, `statsmodels`, `scikit-learn`, `virtualenv`, `jedi`
 * LaTeX
 * Slack
 
-This script is held within the [`brew-ds`](https://github.com/nathaneastwood/brew-ds) repository on GitHub; instructions can be found in the `README.md`.
+A repository called `brew-ds` has been prepared and [hosted on GitHub](https://github.com/nathaneastwood/brew-ds), which will set up a MacOS machine with the above tools; instructions can be found in the `README.md`.
 
 
 
