@@ -258,6 +258,7 @@ The [safe-exceptions library](https://haskell-lang.org/library/safe-exceptions) 
 
 ## Scala
 
-*TODO*
-
+Scala comes with style
+recommendations [here](http://docs.scala-lang.org/style/). These are recommended
+for Scala development.
 
