@@ -2,13 +2,18 @@
 
 ## Haskell
 
-For Haskell we recommend Johan
-Tibell's
-[style guide](https://github.com/tibbe/haskell-style-guide/blob/master/haskell-style.md). This style guide is similar to the designs we choose for implementing python code and is a good fit for projects.
+For Haskell we recommend Johan Tibell's
+[style guide](https://github.com/tibbe/haskell-style-guide/blob/master/haskell-style.md).
+This style guide is similar to the designs we choose for implementing python
+code and is a  good fit for projects.
 
-Projects are managed using [`stack`](https://github.com/commercialhaskell/stack/blob/master/doc/GUIDE.md). However, `cabal` is also suitable. So long as the project can be passed on and compiles then whichever tool you use to sandbox your work is fine.
+Projects are managed using
+[`stack`](https://github.com/commercialhaskell/stack/blob/master/doc/GUIDE.md).
+However, tne `cabal` tool is also suitable. So long as the project can be passed
+on and compiles then whichever tool you use to sandbox your work is fine.
 
-It is recommended that you keep your GHC up to date and document which version your program is to be compiled with.
+It is recommended that you keep your GHC up to date and document which version
+your program is to be compiled with.
 
 Key points from the above style guide are included below.
 
@@ -17,9 +22,13 @@ Key points from the above style guide are included below.
 
 Maximum line length is *80 characters*.
 
+
 ##### Indentation {-}
 
-Tabs are illegal.  Use spaces for indenting. Indent your code blocks with *4 spaces*. Indent the `where` keyword two spaces to set it apart from the rest of the code and indent the definitions in a `where` clause 2 spaces.
+Tabs are illegal.  Use spaces for indenting. Indent your code blocks either *2
+spaces* or *4 spaces*. Indent the `where` keyword two spaces to set it apart
+from the rest of the code and indent the definitions in a `where` clause 2
+spaces. Other spacing rules should follow Haskell guidelines.
 
 
 ##### Pragmas {-}
@@ -33,7 +42,10 @@ id x = x
 {-# INLINE id #-}
 ```
 
-In the case of data type definitions you must put the pragma before the type it applies to.  Example:
+In the case of data type definitions you must put the pragma before the type it
+applies to.
+
+Example:
 
 ```haskell
 data Array e = Array
@@ -60,9 +72,13 @@ module Data.Set
 
 ##### If-then-else clauses {-}
 
-Generally, guards and pattern matches should be preferred over if-then-else clauses, where possible.  Short cases should usually be put on a single line (when line length allows it).
+Generally, guards and pattern matches should be preferred over if-then-else
+clauses, where possible.  Short cases should usually be put on a single line
+(when line length allows it).
 
-When writing non-monadic code (i.e. when not using `do`) and guards and pattern matches can't be used, you can align if-then-else clauses like you would normal expressions:
+When writing non-monadic code (i.e. when not using `do`) and guards and pattern
+matches can't be used, you can align if-then-else clauses like you would normal
+expressions:
 
 ```haskell
 foo = if ...
@@ -70,7 +86,10 @@ foo = if ...
       else ...
 ```
 
-Otherwise, you should be consistent with the 4-spaces indent rule, and the `then` and the `else` keyword should be aligned.  Examples:
+Otherwise, you should be consistent with the 4-spaces indent rule, and the
+`then` and the `else` keyword should be aligned.
+
+Examples:
 
 ```haskell
 foo = do
@@ -122,9 +141,12 @@ Imports should be grouped in the following order:
 2. related third party imports
 3. local application/library specific imports
 
-Put a blank line between each group of imports.  The imports in each group should be sorted alphabetically, by module name.
+Put a blank line between each group of imports.  The imports in each group
+should be sorted alphabetically, by module name.
 
-Always use explicit import lists or `qualified` imports for standard and third party libraries.  This makes the code more robust against changes in these libraries. Exception: The Prelude.
+Always use explicit import lists or `qualified` imports for standard and third
+party libraries.  This makes the code more robust against changes in these
+libraries. Exception: The Prelude.
 
 
 #### Comments {-}
@@ -136,7 +158,11 @@ Write proper sentences; start with a capital letter and use proper punctuation.
 
 ##### Top-Level Definitions {-}
 
-Comment every top level function (particularly exported functions), and provide a type signature; use Haddock syntax in the comments. Comment every exported data type.  Function example:
+Comment every top level function (particularly exported functions), and provide
+a type signature; use Haddock syntax in the comments. Comment every exported
+data type.
+
+Function example:
 
 ```haskell
 -- | Send a message on a socket.  The socket must be in a connected
@@ -147,7 +173,8 @@ send :: Socket      -- ^ Connected socket
      -> IO Int      -- ^ Bytes sent
 ```
 
-For functions the documentation should give enough information to apply the function without looking at the function's definition.
+For functions the documentation should give enough information to apply the
+function without looking at the function's definition.
 
 Record example:
 
@@ -175,7 +202,8 @@ data Record = Record
 
 ##### End-of-Line Comments {-}
 
-Separate end-of-line comments from the code using 2 spaces. Align comments for data type definitions.  Some examples:
+Separate end-of-line comments from the code using 2 spaces. Align comments for
+data type definitions.  Some examples:
 
 ```haskell
 data Parser = Parser
@@ -228,7 +256,7 @@ Code should be compilable with `-Wall -Werror`.  There should be no warnings.
 The [safe-exceptions library](https://haskell-lang.org/library/safe-exceptions) should be used. The library contains guidance on its use.
 
 
-## Java
+## Scala
 
 *TODO*
 
