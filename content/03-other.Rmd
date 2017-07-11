@@ -9,7 +9,7 @@ code and is a  good fit for projects.
 
 Projects are managed using
 [`stack`](https://github.com/commercialhaskell/stack/blob/master/doc/GUIDE.md).
-However, tne `cabal` tool is also suitable. So long as the project can be passed
+However, the `cabal` tool is also suitable. So long as the project can be passed
 on and compiles then whichever tool you use to sandbox your work is fine.
 
 It is recommended that you keep your GHC up to date and document which version
