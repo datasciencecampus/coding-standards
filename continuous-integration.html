@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Data Science Project Coding Standards</title>
+  <meta name="description" content="Data Science Project Coding Standards">
+  <meta name="generator" content="bookdown 0.4 and GitBook 2.6.7">
+
+  <meta property="og:title" content="Data Science Project Coding Standards" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+  <meta name="github-repo" content="datasciencecampus/coding-standards" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Data Science Project Coding Standards" />
+  
+  
+  
+
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  
+  
+<link rel="prev" href="packaging-projects.html">
+<link rel="next" href="licensing.html">
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<style type="text/css">
+div.sourceCode { overflow-x: auto; }
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; background-color: #2a211c; color: #bdae9d; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; background-color: #2a211c; color: #bdae9d; border-right: 1px solid #bdae9d; }
+td.sourceCode { padding-left: 5px; }
+pre, code { color: #bdae9d; background-color: #2a211c; }
+code > span.kw { color: #43a8ed; font-weight: bold; } /* Keyword */
+code > span.dt { text-decoration: underline; } /* DataType */
+code > span.dv { color: #44aa43; } /* DecVal */
+code > span.bn { color: #44aa43; } /* BaseN */
+code > span.fl { color: #44aa43; } /* Float */
+code > span.ch { color: #049b0a; } /* Char */
+code > span.st { color: #049b0a; } /* String */
+code > span.co { color: #0066ff; font-style: italic; } /* Comment */
+code > span.al { color: #ffff00; } /* Alert */
+code > span.fu { color: #ff9358; font-weight: bold; } /* Function */
+code > span.er { color: #ffff00; font-weight: bold; } /* Error */
+code > span.wa { color: #ffff00; font-weight: bold; } /* Warning */
+code > span.cn { } /* Constant */
+code > span.sc { color: #049b0a; } /* SpecialChar */
+code > span.vs { color: #049b0a; } /* VerbatimString */
+code > span.ss { color: #049b0a; } /* SpecialString */
+code > span.im { } /* Import */
+code > span.va { } /* Variable */
+code > span.cf { color: #43a8ed; font-weight: bold; } /* ControlFlow */
+code > span.op { } /* Operator */
+code > span.bu { } /* BuiltIn */
+code > span.ex { } /* Extension */
+code > span.pp { font-weight: bold; } /* Preprocessor */
+code > span.at { } /* Attribute */
+code > span.do { color: #0066ff; font-style: italic; } /* Documentation */
+code > span.an { color: #0066ff; font-weight: bold; font-style: italic; } /* Annotation */
+code > span.co { color: #0066ff; font-weight: bold; font-style: italic; } /* Comment */
+code > span.in { color: #0066ff; font-weight: bold; font-style: italic; } /* Information */
+</style>
+
+<link rel="stylesheet" href="rsrc/style/custom.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">DSC Coding Standards</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Preface</a></li>
+<li class="chapter" data-level="1" data-path="r.html"><a href="r.html"><i class="fa fa-check"></i><b>1</b> R</a><ul>
+<li class="chapter" data-level="1.1" data-path="r.html"><a href="r.html#style"><i class="fa fa-check"></i><b>1.1</b> Programming Styles</a></li>
+<li class="chapter" data-level="1.2" data-path="r.html"><a href="r.html#tools"><i class="fa fa-check"></i><b>1.2</b> Tools</a></li>
+<li class="chapter" data-level="1.3" data-path="r.html"><a href="r.html#docs-r"><i class="fa fa-check"></i><b>1.3</b> Documentating Code</a></li>
+<li class="chapter" data-level="1.4" data-path="r.html"><a href="r.html#tests-r"><i class="fa fa-check"></i><b>1.4</b> Testing</a></li>
+<li class="chapter" data-level="1.5" data-path="r.html"><a href="r.html#coverage-r"><i class="fa fa-check"></i><b>1.5</b> Code Coverage</a></li>
+<li class="chapter" data-level="1.6" data-path="r.html"><a href="r.html#package-r"><i class="fa fa-check"></i><b>1.6</b> Code Packaging</a></li>
+<li class="chapter" data-level="1.7" data-path="r.html"><a href="r.html#deps-r"><i class="fa fa-check"></i><b>1.7</b> Dependency Management</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="python.html"><a href="python.html"><i class="fa fa-check"></i><b>2</b> Python</a><ul>
+<li class="chapter" data-level="2.1" data-path="python.html"><a href="python.html#style-guide"><i class="fa fa-check"></i><b>2.1</b> Style guide</a></li>
+<li class="chapter" data-level="2.2" data-path="python.html"><a href="python.html#package-management"><i class="fa fa-check"></i><b>2.2</b> Package Management</a><ul>
+<li class="chapter" data-level="2.2.1" data-path="python.html"><a href="python.html#choosing-a-container"><i class="fa fa-check"></i><b>2.2.1</b> Choosing a container</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="other-languages.html"><a href="other-languages.html"><i class="fa fa-check"></i><b>3</b> Other Languages</a><ul>
+<li class="chapter" data-level="3.1" data-path="other-languages.html"><a href="other-languages.html#haskell"><i class="fa fa-check"></i><b>3.1</b> Haskell</a></li>
+<li class="chapter" data-level="3.2" data-path="other-languages.html"><a href="other-languages.html#scala"><i class="fa fa-check"></i><b>3.2</b> Scala</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="version-control.html"><a href="version-control.html"><i class="fa fa-check"></i><b>4</b> Version Control</a><ul>
+<li class="chapter" data-level="4.1" data-path="version-control.html"><a href="version-control.html#git-style-guide"><i class="fa fa-check"></i><b>4.1</b> Git style guide</a><ul>
+<li class="chapter" data-level="4.1.1" data-path="version-control.html"><a href="version-control.html#repository-names"><i class="fa fa-check"></i><b>4.1.1</b> Repository names</a></li>
+<li class="chapter" data-level="4.1.2" data-path="version-control.html"><a href="version-control.html#commit-best-practices"><i class="fa fa-check"></i><b>4.1.2</b> Commit best practices</a></li>
+<li class="chapter" data-level="4.1.3" data-path="version-control.html"><a href="version-control.html#commit-frequency"><i class="fa fa-check"></i><b>4.1.3</b> Commit frequency</a></li>
+<li class="chapter" data-level="4.1.4" data-path="version-control.html"><a href="version-control.html#commit-message"><i class="fa fa-check"></i><b>4.1.4</b> Commit message</a></li>
+<li class="chapter" data-level="4.1.5" data-path="version-control.html"><a href="version-control.html#tag-names"><i class="fa fa-check"></i><b>4.1.5</b> Tag names</a></li>
+<li class="chapter" data-level="4.1.6" data-path="version-control.html"><a href="version-control.html#branch-size"><i class="fa fa-check"></i><b>4.1.6</b> Branch size</a></li>
+<li class="chapter" data-level="4.1.7" data-path="version-control.html"><a href="version-control.html#branch-names"><i class="fa fa-check"></i><b>4.1.7</b> Branch names</a></li>
+<li class="chapter" data-level="4.1.8" data-path="version-control.html"><a href="version-control.html#workflow-practices"><i class="fa fa-check"></i><b>4.1.8</b> Workflow practices</a></li>
+</ul></li>
+<li class="chapter" data-level="4.2" data-path="version-control.html"><a href="version-control.html#references"><i class="fa fa-check"></i><b>4.2</b> References</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="packaging-projects.html"><a href="packaging-projects.html"><i class="fa fa-check"></i><b>5</b> Packaging projects</a></li>
+<li class="chapter" data-level="6" data-path="continuous-integration.html"><a href="continuous-integration.html"><i class="fa fa-check"></i><b>6</b> Continuous Integration</a></li>
+<li class="chapter" data-level="7" data-path="licensing.html"><a href="licensing.html"><i class="fa fa-check"></i><b>7</b> Licensing</a></li>
+<li class="chapter" data-level="8" data-path="resources.html"><a href="resources.html"><i class="fa fa-check"></i><b>8</b> Resources</a><ul>
+<li class="chapter" data-level="8.1" data-path="resources.html"><a href="resources.html#setting-up-your-computer"><i class="fa fa-check"></i><b>8.1</b> Setting up your computer</a></li>
+<li class="chapter" data-level="8.2" data-path="resources.html"><a href="resources.html#online-learning-materials"><i class="fa fa-check"></i><b>8.2</b> Online Learning Materials</a></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/datasciencecampus/coding-standards" target="blank">Source on GitHub</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Data Science Project Coding Standards</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="continuous-integration" class="section level1">
+<h1><span class="header-section-number">6</span> Continuous Integration</h1>
+<p><em>TODO {-}</em></p>
+<ul>
+<li>Travis, Jenkins, etc.*</li>
+</ul>
+
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="packaging-projects.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="licensing.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script>
+require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": false,
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"download": null,
+"toc": {
+"collapse": "none"
+}
+});
+});
+</script>
+
+</body>
+
+</html>
